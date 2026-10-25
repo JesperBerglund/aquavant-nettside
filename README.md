@@ -15,7 +15,7 @@ Tommelfingerregler som hindrer problemer:
 - **Endre alltid begge språk** (`en` og `no`).
 - **Kjør `npm run check` før du publiserer.**
 - **Ikke flytt eller gi nytt navn til filer i `public/assets/`.** Sidene peker på dem.
-- Trenger du bare Node.js (gratis, nodejs.org). Ingen andre programmer eller pakker må installeres.
+- Trenger du bare Node.js (gratis, nodejs.org). Kjør `npm install` én gang i denne mappen før første bygg. Det henter bildeverktøyet (sharp) som komprimerer opplastede bilder.
 
 
 Ny versjon bygget fra bunnen av, inspirert av inflect.co.uk: mørk videohero, blått budskapsbånd, animert popup-meny, en fast «Talk to us»-fane i høyre kant, store avrundede blokker og en karusell for MicroVant-serien.
@@ -28,6 +28,7 @@ Siden er på engelsk (rot) og norsk (`/no/`), med fem hovedsider per språk: Hom
 |---|---|
 | `content/en/*.json`, `content/no/*.json` | All synlig tekst, én fil per side og språk, pluss SEO-tittel og -beskrivelse |
 | `content/site.json` | E-postadresser, org.nr. og LinkedIn-lenke (gjelder alle sider) |
+| `content/images.json` | Hvilke bilder som brukes (fotoene, portrettene og delingsbildet), med bildetekst for Google og skjermlesere |
 | `.pages.yml` | Oppsettet for redigeringsverktøyet Pages CMS: hvilke felt kunden ser |
 | `src/pages/en/*.html`, `src/pages/no/*.html` | Oppsettet (HTML) for hver side. Teksten hentes inn fra `content/` der det står `{{t.seksjon.felt}}` |
 | `build.mjs` | Felles meny, bunntekst, SEO-tagger, språkbytte og sitemap. Lager ferdige sider i `public/` |
@@ -61,6 +62,10 @@ Husk å endre begge språk når innholdet endres.
 - **Bilder**: bildene er AI-genererte (Yapper Soul 2). Vurder å bytte til ekte foto når det finnes.
 
 Fortrolige tall fra kunden er bevisst holdt utenfor nettsiden.
+
+## Bilder
+
+Fotoene, portrettene av Kjetil og Cheng og delingsbildet kan byttes under **Images** i Pages CMS. Opplastede bilder havner i `public/assets/img/uploads/`, og byggesteget lager komprimerte kopier i riktig størrelse i `public/assets/img/cms/` (beskåret til 4:5 for portretter og 1200 × 630 for delingsbildet). Uten bilde vises initialene i portrettet. Hvalanimasjonen, havvideoen og logoene kan ikke byttes i verktøyet.
 
 ## Kontaktskjemaet
 

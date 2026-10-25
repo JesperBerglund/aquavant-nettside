@@ -6,3 +6,6 @@ node_modules/
 
 # Local Netlify folder
 .netlify
+
+# Compressed copies of uploaded images, made by build.mjs on every build
+public/assets/img/cms/

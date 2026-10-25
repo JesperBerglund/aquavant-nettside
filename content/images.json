@@ -1,0 +1,47 @@
+{
+  "fjord": {
+    "image": "/assets/img/fjord.jpg",
+    "alt_en": "Circular salmon pens in a Norwegian fjord at golden hour, a work boat passing between them",
+    "alt_no": "Runde laksemerder i en norsk fjord i gyllent kveldslys, med en arbeidsbåt mellom merdene"
+  },
+  "production": {
+    "image": "/assets/img/production.jpg",
+    "alt_en": "Stainless-steel production vessels in a bright hall lit by afternoon sun",
+    "alt_no": "Produksjonstanker i rustfritt stål i en lys hall med ettermiddagssol"
+  },
+  "lab": {
+    "image": "/assets/img/lab.jpg",
+    "alt_en": "A scientist by a sunlit window pipetting a milky formulation into small glass vials",
+    "alt_no": "En forsker ved et solfylt vindu pipetterer en melkehvit formulering i små glassflasker"
+  },
+  "emulsion": {
+    "image": "/assets/img/emulsion.jpg",
+    "alt_en": "Close-up of oil droplets in an emulsion, lit by warm sunlight",
+    "alt_no": "Nærbilde av oljedråper i en emulsjon, opplyst av varmt sollys"
+  },
+  "vaccination": {
+    "image": "/assets/img/vaccination.jpg",
+    "alt_en": "A fish-health technician kneeling on a pen walkway holding a salmon",
+    "alt_no": "En fiskehelsetekniker kneler på en gangbane ved merden og holder en laks"
+  },
+  "trials": {
+    "image": "/assets/img/trials.jpg",
+    "alt_en": "A researcher with a clipboard beside round outdoor fish tanks under a wide sky",
+    "alt_no": "En forsker med skriveplate ved runde utendørs fisketanker under åpen himmel"
+  },
+  "kjetil": {
+    "image": "/assets/img/team/kjetil-fyrand.jpg",
+    "initials": "KF",
+    "alt_en": "Portrait of Kjetil Fyrand",
+    "alt_no": "Portrett av Kjetil Fyrand"
+  },
+  "cheng": {
+    "image": "",
+    "initials": "CX",
+    "alt_en": "Portrait of Dr. Cheng Xu",
+    "alt_no": "Portrett av dr. Cheng Xu"
+  },
+  "share": {
+    "image": "/assets/img/og-image.jpg"
+  }
+}

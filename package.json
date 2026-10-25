@@ -1,11 +1,16 @@
 {
   "name": "aquavant-nettside",
   "private": true,
-  "description": "AquaVant website (aquavant.no). No dependencies: plain HTML, CSS and JavaScript.",
+  "description": "AquaVant website (aquavant.no). Plain HTML, CSS and JavaScript; sharp compresses uploaded images at build time.",
   "scripts": {
     "build": "node build.mjs",
     "start": "node serve.mjs",
     "check": "node build.mjs && node tools/check.mjs"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=20.9"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
 }

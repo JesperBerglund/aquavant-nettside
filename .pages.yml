@@ -1,5 +1,10 @@
 # Pages CMS (https://pagescms.org): the form-based editor for the website text.
 # Each page has one file per language in content/. The layout and design are not editable here.
+media:
+  input: public/assets/img
+  output: /assets/img
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
 content:
   - name: company
     label: "Company details (all pages)"
@@ -11,6 +16,84 @@ content:
       - { name: email2, label: "Email, second contact (Cheng)", type: string, required: true }
       - { name: orgno, label: "Organisation number", type: string }
       - { name: linkedin, label: "LinkedIn page (full web address)", type: string }
+  - name: images
+    label: "Images (all pages)"
+    type: file
+    path: content/images.json
+    format: json
+    fields:
+      - name: fjord
+        label: "Photo: Salmon pens in a fjord"
+        description: "Used on: Home (Why it matters), About (top). Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: production
+        label: "Photo: Production hall"
+        description: "Used on: Home (Services), Services (top and two sections). Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: lab
+        label: "Photo: Scientist in a lab"
+        description: "Used on: Home (product carousel), About, Services. Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: emulsion
+        label: "Photo: Emulsion close-up"
+        description: "Used on: Home (product carousel), Technology (top), Services. Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: vaccination
+        label: "Photo: Fish vaccination"
+        description: "Used on: Home (product carousel), Services. Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: trials
+        label: "Photo: Fish tanks / trials"
+        description: "Used on: Home (product carousel), Services. Any size and shape works; it is cropped and compressed automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
+          - { name: alt_en, label: "Description for Google and screen readers (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse for Google og skjermlesere (norsk)", type: string, required: true }
+      - name: kjetil
+        label: "Portrait: Kjetil Fyrand"
+        description: "Used on Home and About. Cropped to a standing 4:5 portrait automatically. Leave the image empty to show the initials instead."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, options: { path: public/assets/img/uploads } }
+          - { name: initials, label: "Initials (shown when there is no image)", type: string, required: true }
+          - { name: alt_en, label: "Description (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse (norsk)", type: string, required: true }
+      - name: cheng
+        label: "Portrait: Cheng Xu"
+        description: "Used on Home and About. Cropped to a standing 4:5 portrait automatically. Leave the image empty to show the initials instead."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, options: { path: public/assets/img/uploads } }
+          - { name: initials, label: "Initials (shown when there is no image)", type: string, required: true }
+          - { name: alt_en, label: "Description (English)", type: string, required: true }
+          - { name: alt_no, label: "Beskrivelse (norsk)", type: string, required: true }
+      - name: share
+        label: "Sharing image (LinkedIn, Messenger, etc.)"
+        description: "Shown when someone shares a link to the site. Cropped to 1200 x 630 automatically."
+        type: object
+        fields:
+          - { name: image, label: "Image", type: image, required: true, options: { path: public/assets/img/uploads } }
   - name: english
     label: "English pages"
     type: group
@@ -110,7 +193,6 @@ content:
               - { name: name1, label: "Name 1", type: string }
               - { name: role1, label: "Role 1", type: string }
               - { name: focus1, label: "Expertise line 1", type: string }
-              - { name: initials1, label: "Initials (shown when there is no photo)", type: string }
               - { name: name2, label: "Name 2", type: string }
               - { name: role2, label: "Role 2", type: string }
               - { name: focus2, label: "Expertise line 2", type: string }
@@ -342,7 +424,6 @@ content:
               - { name: item2, label: "List item 2", type: string }
               - { name: item3, label: "List item 3", type: string }
               - { name: item4, label: "List item 4", type: string }
-              - { name: text2, label: "Text 2", type: string }
               - { name: subheading2, label: "Subheading 2", type: string }
               - { name: text3, label: "Text 3", type: string }
               - { name: item5, label: "List item 5", type: string }
@@ -570,7 +651,6 @@ content:
               - { name: name1, label: "Name 1", type: string }
               - { name: role1, label: "Role 1", type: string }
               - { name: focus1, label: "Expertise line 1", type: string }
-              - { name: initials1, label: "Initials (shown when there is no photo)", type: string }
               - { name: name2, label: "Name 2", type: string }
               - { name: role2, label: "Role 2", type: string }
               - { name: focus2, label: "Expertise line 2", type: string }
@@ -802,7 +882,6 @@ content:
               - { name: item2, label: "List item 2", type: string }
               - { name: item3, label: "List item 3", type: string }
               - { name: item4, label: "List item 4", type: string }
-              - { name: text2, label: "Text 2", type: string }
               - { name: subheading2, label: "Subheading 2", type: string }
               - { name: text3, label: "Text 3", type: string }
               - { name: item5, label: "List item 5", type: string }

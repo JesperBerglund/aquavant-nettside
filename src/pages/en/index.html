@@ -53,7 +53,7 @@ nav: index
             </ul>
           </div>
           <div class="media media--tall">
-            <img src="{{root}}assets/img/fjord-800.jpg" srcset="{{root}}assets/img/fjord-800.jpg 600w, {{root}}assets/img/fjord.jpg 1200w" sizes="(min-width: 900px) 42vw, 100vw" width="1200" height="1600" alt="Circular salmon pens in a Norwegian fjord at golden hour, a work boat passing between them" loading="lazy">
+            <img src="{{root}}{{img.fjord.small}}" srcset="{{root}}{{img.fjord.small}} {{img.fjord.sw}}w, {{root}}{{img.fjord.src}} {{img.fjord.w}}w" sizes="(min-width: 900px) 42vw, 100vw" width="{{img.fjord.w}}" height="{{img.fjord.h}}" alt="{{img.fjord.alt}}" loading="lazy">
           </div>
         </div>
       </section>
@@ -104,10 +104,10 @@ nav: index
               </div>
             </div>
             <div class="carousel-media" aria-hidden="true">
-              <img class="is-active" src="{{root}}assets/img/emulsion.jpg" alt="" width="1600" height="900" loading="lazy">
-              <img src="{{root}}assets/img/vaccination.jpg" alt="" width="1600" height="900" loading="lazy">
-              <img src="{{root}}assets/img/trials.jpg" alt="" width="1600" height="900" loading="lazy">
-              <img src="{{root}}assets/img/lab.jpg" alt="" width="1600" height="1200" loading="lazy">
+              <img class="is-active" src="{{root}}{{img.emulsion.src}}" alt="" width="{{img.emulsion.w}}" height="{{img.emulsion.h}}" loading="lazy">
+              <img src="{{root}}{{img.vaccination.src}}" alt="" width="{{img.vaccination.w}}" height="{{img.vaccination.h}}" loading="lazy">
+              <img src="{{root}}{{img.trials.src}}" alt="" width="{{img.trials.w}}" height="{{img.trials.h}}" loading="lazy">
+              <img src="{{root}}{{img.lab.src}}" alt="" width="{{img.lab.w}}" height="{{img.lab.h}}" loading="lazy">
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ nav: index
       <section class="section section--tight" aria-labelledby="services-title">
         <div class="container split">
           <div class="media media--wide">
-            <img src="{{root}}assets/img/production-800.jpg" srcset="{{root}}assets/img/production-800.jpg 800w, {{root}}assets/img/production.jpg 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="1600" height="900" alt="Stainless-steel production vessels in a bright hall lit by afternoon sun" loading="lazy">
+            <img src="{{root}}{{img.production.small}}" srcset="{{root}}{{img.production.small}} {{img.production.sw}}w, {{root}}{{img.production.src}} {{img.production.w}}w" sizes="(min-width: 900px) 46vw, 100vw" width="{{img.production.w}}" height="{{img.production.h}}" alt="{{img.production.alt}}" loading="lazy">
           </div>
           <div>
             <span class="label">{{t.services.kicker1}}</span>
@@ -157,13 +157,13 @@ nav: index
             <!-- The two founders are equal partners: same card, same size, alphabetical by surname. -->
             <div class="founders">
               <a class="founder" href="about.html#team-title">
-                <span class="founder-photo"><img src="{{root}}assets/img/team/kjetil-fyrand.jpg" alt="Portrait of Kjetil Fyrand" width="600" height="750" loading="lazy"></span>
+                {{portrait.kjetil.founder}}
                 <span class="founder-name">{{t.team.name1}}</span>
                 <span class="founder-role">{{t.team.role1}}</span>
                 <span class="founder-focus">{{t.team.focus1}}</span>
               </a>
               <a class="founder" href="about.html#team-title">
-                <span class="founder-photo founder-photo--initials" aria-hidden="true">{{t.team.initials1}}</span>
+                {{portrait.cheng.founder}}
                 <span class="founder-name">{{t.team.name2}}</span>
                 <span class="founder-role">{{t.team.role2}}</span>
                 <span class="founder-focus">{{t.team.focus2}}</span>

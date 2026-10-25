@@ -4,7 +4,7 @@
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 # Norwegian visitors without a chosen language land on the Norwegian home page.
 [[redirects]]

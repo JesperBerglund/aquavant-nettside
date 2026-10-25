@@ -1,7 +1,7 @@
 // AquaVant site builder. No dependencies: `npm run build` (or `node build.mjs`).
 // Reads page bodies from src/pages/{en,no}/*.html, wraps them in the shared
 // layout (head, header, footer) and writes finished pages to public/.
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -132,9 +132,9 @@ function layout(lang, key, meta, body) {
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${desc}">
   <meta property="og:url" content="${canonical}">
-  <meta property="og:image" content="${SITE}/assets/img/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="${SITE}/${IMG.share.src}">
+  <meta property="og:image:width" content="${IMG.share.w}">
+  <meta property="og:image:height" content="${IMG.share.h}">
   <meta property="og:image:alt" content="AquaVant">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="${r}favicon.svg" type="image/svg+xml">
@@ -236,6 +236,71 @@ ${body.replace(/\{\{root\}\}/g, r).replace(/\{\{email\}\}/g, EMAIL).replace(/\{\
 `;
 }
 
+// ---------- Images (content/images.json, editable in Pages CMS) ----------
+// Photos already in assets/img are used as they are, with their -800 copy if there is one.
+// Uploads (assets/img/uploads/) are resized and compressed into assets/img/cms/ on each build,
+// so a large photo straight from a phone never reaches visitors.
+let sharp;
+try { sharp = (await import("sharp")).default; }
+catch { throw new Error("The image tool is missing. Run `npm install` once in this folder, then build again."); }
+const IMAGES = readJson("content/images.json");
+const CMS_DIR = join(OUT, "assets/img/cms");
+const KIND = { kjetil: "portrait", cheng: "portrait", share: "share" };
+const CROP = { portrait: [600, 750], share: [1200, 630] };
+const made = new Set();
+
+async function prepareImage(slot, kind) {
+  const rel = (IMAGES[slot]?.image || "").trim().replace(/^\/+/, "");
+  if (!rel) {
+    if (kind === "portrait") return null; // shows the initials instead
+    throw new Error(`content/images.json: choose an image for "${slot}"`);
+  }
+  const file = join(OUT, rel);
+  if (!existsSync(file)) throw new Error(`content/images.json: "${slot}" points to /${rel}, which does not exist`);
+  const size = async (path) => { const m = await sharp(join(OUT, path)).metadata(); return [m.width, m.height]; };
+  if (!rel.startsWith("assets/img/uploads/")) {
+    const small = rel.replace(/\.jpg$/, "-800.jpg");
+    const hasSmall = small !== rel && existsSync(join(OUT, small));
+    const [w, h] = await size(rel);
+    const [sw] = hasSmall ? await size(small) : [w];
+    return { src: rel, small: hasSmall ? small : rel, w, h, sw };
+  }
+  mkdirSync(CMS_DIR, { recursive: true });
+  const hash = createHash("sha1").update(readFileSync(file)).digest("hex").slice(0, 8);
+  const write = async (name, resize) => {
+    made.add(name);
+    const out = join(CMS_DIR, name);
+    if (!existsSync(out)) await resize(sharp(file).rotate()).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
+    const [w, h] = await size(`assets/img/cms/${name}`);
+    return { path: `assets/img/cms/${name}`, w, h };
+  };
+  if (kind === "photo") {
+    const full = await write(`${slot}-${hash}.jpg`, (img) => img.resize({ width: 1600, withoutEnlargement: true }));
+    const small = await write(`${slot}-${hash}-800.jpg`, (img) => img.resize({ width: 800, withoutEnlargement: true }));
+    return { src: full.path, small: small.path, w: full.w, h: full.h, sw: small.w };
+  }
+  const [cw, ch] = CROP[kind];
+  const one = await write(`${slot}-${hash}.jpg`, (img) => img.resize(cw, ch, { fit: "cover", position: "attention" }));
+  return { src: one.path, small: one.path, w: one.w, h: one.h, sw: one.w };
+}
+
+const IMG = {};
+for (const slot of Object.keys(IMAGES)) IMG[slot] = await prepareImage(slot, KIND[slot] || "photo");
+if (existsSync(CMS_DIR)) for (const f of readdirSync(CMS_DIR)) if (!made.has(f)) rmSync(join(CMS_DIR, f));
+
+// {{img.slot.field}}: src, small, w, h, sw (width of the small copy) or alt.
+const imgValue = (lang, slot, field) => {
+  if (!IMG[slot]) throw new Error(`Template uses {{img.${slot}.${field}}}, but content/images.json has no image for it`);
+  return field === "alt" ? esc(IMAGES[slot][`alt_${lang}`] || "") : String(IMG[slot][field]);
+};
+// {{portrait.slot.founder|about}}: the founder photo, or their initials when there is no photo.
+const portrait = (lang, slot, variant) => {
+  const p = IMG[slot], ini = esc(IMAGES[slot].initials || "");
+  const img = p && `<img src="{{root}}${p.src}" alt="${esc(IMAGES[slot][`alt_${lang}`] || "")}" width="${p.w}" height="${p.h}" loading="lazy">`;
+  if (variant === "founder") return p ? `<span class="founder-photo">${img}</span>` : `<span class="founder-photo founder-photo--initials" aria-hidden="true">${ini}</span>`;
+  return p ? `<div class="portrait">${img}</div>` : `<div class="portrait" aria-hidden="true">${ini}</div>`;
+};
+
 const sitemap = [];
 for (const lang of ["en", "no"]) {
   const dir = join(ROOT, "src", "pages", lang);
@@ -248,7 +313,10 @@ for (const lang of ["en", "no"]) {
     Object.assign(meta, text.seo);
     if (!meta.title || !meta.description) throw new Error(`content/${lang}/${key}.json needs a page title and description`);
     // {{t.section.field}} in the page template is filled with that text from the content file.
-    const body = template.replace(/\{\{t\.([\w-]+)\.([\w-]+)\}\}/g, (_, s, k) => {
+    const body = template
+      .replace(/\{\{img\.(\w+)\.(\w+)\}\}/g, (_, slot, field) => imgValue(lang, slot, field))
+      .replace(/\{\{portrait\.(\w+)\.(\w+)\}\}/g, (_, slot, variant) => portrait(lang, slot, variant))
+      .replace(/\{\{t\.([\w-]+)\.([\w-]+)\}\}/g, (_, s, k) => {
       const v = text[s]?.[k];
       if (typeof v !== "string") throw new Error(`content/${lang}/${key}.json is missing ${s}.${k}`);
       return v.trim().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

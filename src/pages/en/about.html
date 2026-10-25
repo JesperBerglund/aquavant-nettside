@@ -2,7 +2,7 @@
 nav: about
 -->
 <section class="page-hero deep" aria-labelledby="page-title">
-      <div class="page-hero-img" aria-hidden="true"><img src="{{root}}assets/img/fjord.jpg" alt="" width="1200" height="1600" class="pos-low"></div>
+      <div class="page-hero-img" aria-hidden="true"><img src="{{root}}{{img.fjord.src}}" alt="" width="{{img.fjord.w}}" height="{{img.fjord.h}}" class="pos-low"></div>
       <div class="container page-hero-content">
         <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">{{t.page.link1}}</a></li><li aria-current="page">{{t.page.item1}}</li></ol></nav>
         <h1 id="page-title">{{t.page.title1}}</h1>
@@ -29,7 +29,7 @@ nav: about
             </div>
           </div>
           <div class="media media--tall">
-            <img src="{{root}}assets/img/lab-800.jpg" srcset="{{root}}assets/img/lab-800.jpg 800w, {{root}}assets/img/lab.jpg 1600w" sizes="(min-width: 900px) 38vw, 100vw" width="1600" height="1200" alt="A scientist by a sunlit window pipetting a milky formulation into small glass vials" loading="lazy">
+            <img src="{{root}}{{img.lab.small}}" srcset="{{root}}{{img.lab.small}} {{img.lab.sw}}w, {{root}}{{img.lab.src}} {{img.lab.w}}w" sizes="(min-width: 900px) 38vw, 100vw" width="{{img.lab.w}}" height="{{img.lab.h}}" alt="{{img.lab.alt}}" loading="lazy">
           </div>
         </div>
       </section>
@@ -45,7 +45,7 @@ nav: about
           </div>
           <div class="people">
             <article class="person block block--mist">
-              <div class="portrait"><img src="{{root}}assets/img/team/kjetil-fyrand.jpg" alt="Portrait of Kjetil Fyrand" width="600" height="750" loading="lazy"></div>
+              {{portrait.kjetil.about}}
               <div>
                 <h3>{{t.team.subheading1}}</h3>
                 <p class="role">{{t.team.text1}}</p>
@@ -58,7 +58,7 @@ nav: about
               </div>
             </article>
             <article class="person block block--mist">
-              <div class="portrait" aria-hidden="true">{{t.team.text2}}</div>
+              {{portrait.cheng.about}}
               <div>
                 <h3>{{t.team.subheading2}}</h3>
                 <p class="role">{{t.team.text3}}</p>
