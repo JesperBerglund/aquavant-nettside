@@ -639,22 +639,22 @@
     update();
   }
 
-  /* ---------- Contact form → email ----------
-     Nothing is sent from the website. On submit the visitor's own email app opens a
-     ready-made message to both founders (both addresses in "To"), with a subject and
-     their answers filled in. They press send there. */
+  /* ---------- Contact form → Netlify Forms ----------
+     The message is posted to Netlify, which stores it and emails it to both founders.
+     Without JavaScript the form posts normally and returns to contact.html?sent. */
   var form = document.querySelector("form[data-contact]");
   if (form) {
-    var to = form.dataset.to;
     var t = {
       en: { required: "Please fill in this field.", email: "Enter an email address like name@company.com.", consent: "Please confirm so we can reply to you.", summary: "Please correct the highlighted fields.",
-            subject: "Website enquiry", name: "Name", mail: "Email", org: "Company", topic: "Topic",
-            opened: "Your email app should now open with the message ready. Press send there to reach us. If nothing opens, email us at " },
+            sending: "Sending…", sent: "Thank you. Your message has been sent, and we will reply as soon as we can.",
+            failed: "Sorry, the message could not be sent. Please try again, or email us at " },
       nb: { required: "Fyll ut dette feltet.", email: "Skriv inn en e-postadresse, for eksempel navn@firma.no.", consent: "Bekreft for at vi kan svare deg.", summary: "Rett opp feltene som er markert.",
-            subject: "Henvendelse fra nettsiden", name: "Navn", mail: "E-post", org: "Selskap", topic: "Tema",
-            opened: "E-postprogrammet ditt skal nå åpne seg med meldingen klar. Trykk send der for å nå oss. Åpnes ingenting, kan du skrive til " }
+            sending: "Sender …", sent: "Takk. Meldingen er sendt, og vi svarer så snart vi kan.",
+            failed: "Beklager, meldingen kunne ikke sendes. Prøv igjen, eller skriv til " }
     }[lang];
     var status = form.querySelector(".form-status");
+    var button = form.querySelector("button[type=submit]");
+    var say = function (kind, text) { status.className = "form-status is-" + kind; status.textContent = text; status.focus(); };
 
     function check(field) {
       var err = document.getElementById(field.id + "-error");
@@ -666,11 +666,12 @@
       if (err) err.textContent = msg;
       return !msg;
     }
-    var fields = form.querySelectorAll("input:not([type=hidden]), select, textarea");
+    var fields = form.querySelectorAll("input[id], select, textarea");
     fields.forEach(function (f) {
       f.addEventListener("blur", function () { if (f.value || f.getAttribute("aria-invalid")) check(f); });
     });
-    var val = function (name) { var f = form.elements[name]; return f ? f.value.trim() : ""; };
+
+    if (/[?&]sent\b/.test(location.search)) say("ok", t.sent);
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -682,19 +683,24 @@
         firstBad.focus();
         return;
       }
-      var subject = t.subject + ": " + val("topic") + " – " + val("name") + (val("organisation") ? ", " + val("organisation") : "");
-      var body = [
-        t.name + ": " + val("name"),
-        t.mail + ": " + val("email"),
-        val("organisation") ? t.org + ": " + val("organisation") : null,
-        t.topic + ": " + val("topic"),
-        "",
-        val("message")
-      ].filter(function (l) { return l !== null; }).join("\r\n");
-      window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      status.className = "form-status is-ok";
-      status.textContent = t.opened + to.split(",").join(" / ") + ".";
-      status.focus();
+      var label = button.textContent;
+      button.disabled = true;
+      button.textContent = t.sending;
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        form.reset();
+        fields.forEach(function (f) { f.removeAttribute("aria-invalid"); });
+        say("ok", t.sent);
+      }).catch(function () {
+        say("error", t.failed + form.dataset.fallback + ".");
+      }).then(function () {
+        button.disabled = false;
+        button.textContent = label;
+      });
     });
   }
 

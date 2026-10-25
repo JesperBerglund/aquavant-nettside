@@ -24,7 +24,12 @@ nav: contact
           </div>
 
           <div class="block block--mist">
-            <form class="form" name="contact" method="post" action="mailto:{{email}},{{email2}}" enctype="text/plain" data-contact data-to="{{email}},{{email2}}" novalidate>
+            <!-- Netlify Forms: submissions are stored in Netlify and emailed to both founders
+                 (set up under Forms → Form notifications). bot-field is a spam trap. -->
+            <form class="form" name="contact" method="post" action="contact.html?sent" data-netlify="true" netlify-honeypot="bot-field" data-contact data-fallback="{{email}}" novalidate>
+              <input type="hidden" name="form-name" value="contact">
+              <input type="hidden" name="language" value="Norsk">
+              <p class="visually-hidden" aria-hidden="true"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
               <div class="form-status" role="status" tabindex="-1"></div>
               <div class="form-row">
                 <div class="field">

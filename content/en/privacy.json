@@ -15,8 +15,8 @@
     "text3": "This website does not use cookies, analytics or tracking. Fonts, images and video are served from our own website, so your visit is not shared with third parties such as Google.",
     "heading3": "The contact form",
     "text4": "When you send us a message, we receive your name, email address, organisation (if given) and your message. We use this only to answer your enquiry and to follow up any collaboration it leads to. The legal basis is your consent and our legitimate interest in replying to enquiries (GDPR article 6(1)(a) and (f)).",
-    "text5": "The form does not send anything from this website. When you press send, your own email program opens a message to us with your details filled in, and you send it yourself. The message then travels through your email provider and ours like any other email.",
-    "text6": "We keep enquiries for as long as needed to handle them, and no longer than [12 months] unless they lead to an ongoing collaboration.",
+    "text5": "The form sends your message through our web host, Netlify, Inc. (USA), which stores it and forwards it to our email. Netlify processes the data on our behalf under its data processing agreement, which includes the EU standard contractual clauses for transfers outside the EEA.",
+    "text6": "We keep enquiries for as long as needed to handle them, and no longer than [12 months] unless they lead to an ongoing collaboration. Messages are deleted from Netlify within the same period.",
     "heading4": "Your rights",
     "text7": "You can ask for access to, correction of or deletion of your personal data, and you can withdraw your consent at any time. Email us at the address above. If you believe we handle your data unlawfully, you can complain to the Norwegian Data Protection Authority (Datatilsynet)."
   }

@@ -62,6 +62,10 @@ Husk å endre begge språk når innholdet endres.
 
 Fortrolige tall fra kunden er bevisst holdt utenfor nettsiden.
 
+## Kontaktskjemaet
+
+Skjemaet sendes til Netlify Forms (gratis, uten kredittbruk). Netlify lagrer meldingen og sender den på e-post til begge grunnleggerne. Oppsettet ligger i Netlify under **Forms**: «form detection» må være slått på, og e-postvarsler ligger under **Form notifications**. Innsendte meldinger kan leses og slettes samme sted. Et skjult felt (`bot-field`) stopper det meste av spam.
+
 ## Lansering på Netlify
 
 1. Opprett en gratis konto på netlify.com med AquaVants e-post, slik at kunden eier kontoen.
