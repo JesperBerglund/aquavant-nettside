@@ -1,0 +1,8 @@
+# Mac and editor files that should never be part of the website
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,76 @@
+<!--
+title: Contact AquaVant | Fish vaccine adjuvants, Oslo
+description: Contact AquaVant about MicroVant adjuvants, partnerships, services or investment. We reply within a few working days.
+nav: contact
+-->
+    <section class="page-hero deep" aria-labelledby="page-title">
+      <div class="container page-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+        <h1 id="page-title">Let’s talk partnership.</h1>
+        <p class="lead">We would like to hear from vaccine manufacturers, aquaculture companies and investors. Send us a message and we will reply within a few working days.</p>
+      </div>
+    </section>
+
+    <div class="flow">
+      <section class="section" aria-label="Contact details and form">
+        <div class="container contact-grid">
+          <div>
+            <h2>Get in touch</h2>
+            <p class="lead">Prefer email? Write to us directly.</p>
+            <dl class="contact-list">
+              <div><dt class="k">Kjetil Fyrand, co-founder</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+              <div><dt class="k">Dr. Cheng Xu, co-founder</dt><dd><a href="mailto:{{email2}}">{{email2}}</a></dd></div>
+              <div><dt class="k">Location</dt><dd><span class="v">Oslo, Norway</span></dd></div>
+              <div><dt class="k">Company</dt><dd><span class="v">AquaVant AS</span><br><span class="k">Org. no. {{orgno}}</span></dd></div>
+            </dl>
+          </div>
+
+          <div class="block block--mist">
+            <form class="form" name="contact" method="post" action="mailto:{{email}},{{email2}}" enctype="text/plain" data-contact data-to="{{email}},{{email2}}" novalidate>
+              <div class="form-status" role="status" tabindex="-1"></div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="field">
+                  <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="organisation">Company or organisation</label>
+                  <input id="organisation" name="organisation" type="text" autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label for="topic">What is it about?</label>
+                  <select id="topic" name="topic">
+                    <option>MicroVant adjuvants</option>
+                    <option>Vaccine production</option>
+                    <option>Vaccination equipment</option>
+                    <option>Clinical trials</option>
+                    <option>Investment</option>
+                    <option>Something else</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required aria-describedby="message-hint message-error"></textarea>
+                <span class="hint" id="message-hint">Tell us about your species, vaccine format or what you would like to discuss.</span>
+                <span class="field-error" id="message-error"></span>
+              </div>
+              <div class="field">
+                <label class="checkbox" for="consent"><input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error"> <span>I agree that AquaVant may store my details to answer this enquiry. Read our <a href="privacy.html">privacy policy</a>.</span></label>
+                <span class="field-error" id="consent-error"></span>
+              </div>
+              <p class="hint">Fields marked <span class="req">*</span> are required.</p>
+              <div><button class="btn btn--ocean" type="submit">Send message</button></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>

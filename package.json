@@ -1,0 +1,11 @@
+{
+  "name": "aquavant-nettside",
+  "private": true,
+  "description": "AquaVant website (aquavant.no). No dependencies: plain HTML, CSS and JavaScript.",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node serve.mjs",
+    "check": "node build.mjs && node tools/check.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

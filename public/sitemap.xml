@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aquavant.no/about.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/about.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/about.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/contact.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/contact.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/services.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/services.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/services.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/technology.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/technology.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/no/about.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/about.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/about.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/no/contact.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/contact.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/no/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/no/services.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/services.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/services.html"/>
+  </url>
+  <url>
+    <loc>https://aquavant.no/no/technology.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aquavant.no/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://aquavant.no/no/technology.html"/>
+  </url>
+</urlset>

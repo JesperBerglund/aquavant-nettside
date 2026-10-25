@@ -1,0 +1,27 @@
+# AquaVant website. Netlify runs the build and publishes public/.
+[build]
+  command = "node build.mjs"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Norwegian visitors without a chosen language land on the Norwegian home page.
+[[redirects]]
+  from = "/"
+  to = "/no/"
+  status = 302
+  conditions = {Language = ["nb", "no", "nn"]}
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

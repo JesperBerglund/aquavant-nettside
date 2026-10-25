@@ -1,0 +1,76 @@
+<!--
+title: Kontakt AquaVant | Adjuvanser til fiskevaksiner, Oslo
+description: Kontakt AquaVant om MicroVant-adjuvanser, samarbeid, tjenester eller investering. Vi svarer i løpet av noen virkedager.
+nav: contact
+-->
+    <section class="page-hero deep" aria-labelledby="page-title">
+      <div class="container page-hero-content">
+        <nav class="breadcrumb" aria-label="Brødsmuler"><ol><li><a href="index.html">Hjem</a></li><li aria-current="page">Kontakt</li></ol></nav>
+        <h1 id="page-title">La oss snakke om samarbeid.</h1>
+        <p class="lead">Vi vil gjerne høre fra vaksineprodusenter, havbruksselskaper og investorer. Send oss en melding, så svarer vi i løpet av noen virkedager.</p>
+      </div>
+    </section>
+
+    <div class="flow">
+      <section class="section" aria-label="Kontaktinformasjon og skjema">
+        <div class="container contact-grid">
+          <div>
+            <h2>Ta kontakt</h2>
+            <p class="lead">Vil du heller sende e-post? Skriv direkte til oss.</p>
+            <dl class="contact-list">
+              <div><dt class="k">Kjetil Fyrand, medgründer</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+              <div><dt class="k">Dr. Cheng Xu, medgründer</dt><dd><a href="mailto:{{email2}}">{{email2}}</a></dd></div>
+              <div><dt class="k">Sted</dt><dd><span class="v">Oslo, Norge</span></dd></div>
+              <div><dt class="k">Selskap</dt><dd><span class="v">AquaVant AS</span><br><span class="k">Org.nr. {{orgno}}</span></dd></div>
+            </dl>
+          </div>
+
+          <div class="block block--mist">
+            <form class="form" name="contact" method="post" action="mailto:{{email}},{{email2}}" enctype="text/plain" data-contact data-to="{{email}},{{email2}}" novalidate>
+              <div class="form-status" role="status" tabindex="-1"></div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Navn <span class="req" aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="field">
+                  <label for="email">E-post <span class="req" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="organisation">Selskap eller organisasjon</label>
+                  <input id="organisation" name="organisation" type="text" autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label for="topic">Hva gjelder det?</label>
+                  <select id="topic" name="topic">
+                    <option>MicroVant-adjuvanser</option>
+                    <option>Vaksineproduksjon</option>
+                    <option>Vaksinasjonsutstyr</option>
+                    <option>Kliniske studier</option>
+                    <option>Investering</option>
+                    <option>Noe annet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Melding <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required aria-describedby="message-hint message-error"></textarea>
+                <span class="hint" id="message-hint">Fortell oss om art, vaksineformat eller hva du vil snakke om.</span>
+                <span class="field-error" id="message-error"></span>
+              </div>
+              <div class="field">
+                <label class="checkbox" for="consent"><input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error"> <span>Jeg godtar at AquaVant lagrer opplysningene mine for å svare på henvendelsen. Les <a href="privacy.html">personvernerklæringen</a>.</span></label>
+                <span class="field-error" id="consent-error"></span>
+              </div>
+              <p class="hint">Felt merket med <span class="req">*</span> må fylles ut.</p>
+              <div><button class="btn btn--ocean" type="submit">Send melding</button></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
