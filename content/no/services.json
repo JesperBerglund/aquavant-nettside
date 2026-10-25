@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Tjenester for produsenter av fiskevaksiner | AquaVant",
+    "description": "Rådgivning om produksjon av fiskevaksiner, vaksinasjonsutstyr og kliniske studier, fra spesialister med over 45 års samlet erfaring."
+  },
+  "page": {
+    "link1": "Hjem",
+    "item1": "Tjenester",
+    "title1": "Kompetanse rundt hele vaksinen.",
+    "intro1": "Adjuvansen er produktet vårt. Rundt den hjelper vi produsenter med produksjon, vaksinasjonsutstyr og kliniske studier."
+  },
+  "services": {
+    "kicker1": "Dette tilbyr vi",
+    "heading1": "Én partner for adjuvansen og kunnskapen rundt den.",
+    "intro1": "Grunnleggerne våre har brukt karrieren på å utvikle, produsere og registrere fiskevaksiner. Den erfaringen bruker vi for kundene våre.",
+    "subheading1": "MicroVant-adjuvanser",
+    "text1": "Ferdige adjuvansformuleringer til injiserbare fiskevaksiner, utviklet for laksefisk og tilapia. Vi jobber sammen med dere om formulering og testing til adjuvansen er kvalifisert for vaksinen deres.",
+    "button1": "Om teknologien",
+    "subheading2": "Vaksineproduksjon",
+    "text2": "Rådgivning om produksjon av fiskevaksiner og om utstyret som trengs.",
+    "item1": "Produksjonsprosesser og oppskalering",
+    "item2": "Valg av produksjonsutstyr",
+    "item3": "Krav til kvalitet og dokumentasjon",
+    "subheading3": "Vaksinasjonsutstyr",
+    "text3": "Rådgivning om utstyr for å vaksinere fisk, manuelt eller med automatiske maskiner.",
+    "item4": "Manuell vaksinering",
+    "item5": "Automatiske vaksinasjonssystemer",
+    "item6": "Riktig utstyr for vaksine og fiskestørrelse",
+    "subheading4": "Kliniske studier",
+    "text4": "Rådgivning om å planlegge og gjennomføre vaksinestudier, i laboratoriet og i felt.",
+    "item7": "Studiedesign",
+    "item8": "Laboratorie- og feltstudier",
+    "item9": "Dokumentasjon for regulatoriske søknader",
+    "subheading5": "Teknisk støtte",
+    "text5": "Hjelp til å ta i bruk en ny adjuvans, fra de første formuleringsforsøkene til fast produksjon.",
+    "item10": "Støtte i formuleringsarbeidet",
+    "item11": "Testing i kundens FoU",
+    "item12": "Løpende teknisk oppfølging"
+  },
+  "who": {
+    "kicker1": "Hvem vi jobber med",
+    "heading1": "Laget for selskapene som lager fiskevaksiner.",
+    "highlight1": "Globale produsenter",
+    "text1": "Dyrehelseselskaper med etablerte porteføljer av fiskevaksiner.",
+    "highlight2": "Lokale produsenter",
+    "text2": "Regionale vaksineprodusenter, også produsenter av autogene (anleggsspesifikke) vaksiner.",
+    "highlight3": "Havbruksselskaper",
+    "text3": "Oppdrettere og partnere som vil forstå vaksinemulighetene sine."
+  },
+  "cta": {
+    "heading1": "Fortell oss hva dere jobber med.",
+    "text1": "Enten dere trenger en adjuvans, råd om produksjon eller hjelp med en studie, tar vi gjerne en prat.",
+    "button1": "Kontakt AquaVant"
+  }
+}

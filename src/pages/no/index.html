@@ -1,9 +1,7 @@
 <!--
-title: AquaVant | Adjuvanser til fiskevaksiner i havbruk
-description: AquaVant er et biotekselskap i Oslo som utvikler MicroVant, en serie adjuvanser for produsenter av fiskevaksiner i global havbruksnæring.
 nav: index
 -->
-    <!-- Scroll sequence (after seasats.com): the calm ocean loops, then a whale fluke
+<!-- Scroll sequence (after seasats.com): the calm ocean loops, then a whale fluke
          rises frame by frame as the visitor scrolls. Frames live in assets/whale/. -->
     <section class="whale" data-whale data-frames="{{root}}assets/whale/" data-count="168" aria-labelledby="hero-title">
       <div class="whale-pin hero deep">
@@ -14,11 +12,11 @@ nav: index
         </video>
       </div>
       <div class="container hero-content">
-        <h1 id="hero-title">Bedre vaksiner for et sunnere havbruk.</h1>
-        <p class="lead">AquaVant utvikler MicroVant, en serie adjuvanser som får fiskevaksiner til å virke. Vi leverer dem til selskapene som lager vaksinene.</p>
+        <h1 id="hero-title">{{t.hero.title1}}</h1>
+        <p class="lead">{{t.hero.intro1}}</p>
         <div class="btn-row">
-          <a class="btn" href="technology.html">Utforsk teknologien</a>
-          <a class="btn btn--outline-light" href="contact.html">Bli samarbeidspartner</a>
+          <a class="btn" href="technology.html">{{t.hero.button1}}</a>
+          <a class="btn btn--outline-light" href="contact.html">{{t.hero.button2}}</a>
         </div>
       </div>
       <button class="video-toggle" type="button" aria-pressed="false" aria-label="Sett bakgrunnsvideoen på pause" data-label-pause="Sett bakgrunnsvideoen på pause" data-label-play="Spill av bakgrunnsvideoen">
@@ -30,12 +28,12 @@ nav: index
 
     <section class="band" aria-label="Kort om AquaVant">
       <div class="container">
-        <p class="statement">Vi er et bioteknologiselskap i Oslo som jobber med én del av fiskevaksinen: adjuvansen. <span class="soft">Det er ingrediensen som hjelper immunforsvaret til en vaksinert fisk å reagere, og et fagfelt grunnleggerne våre til sammen har over 45 års erfaring fra.</span></p>
+        <p class="statement">{{t.s2.statement1}} <span class="soft">{{t.s2.soft1}}</span></p>
         <div class="band-body">
-          <p>Vi lager ikke vaksiner selv. Vi utvikler ferdige adjuvansformuleringer til selskapene som gjør det, og gir dem råd om vaksineproduksjon, vaksinasjonsutstyr og kliniske studier.</p>
+          <p>{{t.s2.text1}}</p>
           <div>
-            <p>De første formuleringene våre er laget for laksefisk og tilapia, to av de største gruppene oppdrettsfisk.</p>
-            <div class="btn-row"><a class="btn btn--light" href="about.html">Om AquaVant</a></div>
+            <p>{{t.s2.text2}}</p>
+            <div class="btn-row"><a class="btn btn--light" href="about.html">{{t.s2.button1}}</a></div>
           </div>
         </div>
       </div>
@@ -45,13 +43,13 @@ nav: index
       <section class="section" aria-labelledby="need-title">
         <div class="container split split--wide-text">
           <div>
-            <span class="label">Hvorfor det betyr noe</span>
-            <h2 id="need-title">Frisk fisk trenger vaksiner som virker.</h2>
-            <p class="lead measure">Sykdom er en av de største utfordringene i fiskeoppdrett. Vaksiner hjelper med å forebygge den, og adjuvansen er en avgjørende del av alle injiserbare fiskevaksiner.</p>
+            <span class="label">{{t.need.kicker1}}</span>
+            <h2 id="need-title">{{t.need.heading1}}</h2>
+            <p class="lead measure">{{t.need.intro1}}</p>
             <ul class="points">
-              <li><strong>Sykdomspress</strong><p>Å forebygge sykdom er fortsatt en stor utfordring for havbruk over hele verden.</p></li>
-              <li><strong>Antibiotikabruk</strong><p>Der vaksiner er vanskelige å få tak i, er mange markeder fortsatt avhengige av antibiotika.</p></li>
-              <li><strong>Få spesialister</strong><p>Tilgangen på adjuvanser til fiskevaksiner er fragmentert, så produsentene har få spesialiserte partnere å velge mellom.</p></li>
+              <li><strong>{{t.need.highlight1}}</strong><p>{{t.need.text1}}</p></li>
+              <li><strong>{{t.need.highlight2}}</strong><p>{{t.need.text2}}</p></li>
+              <li><strong>{{t.need.highlight3}}</strong><p>{{t.need.text3}}</p></li>
             </ul>
           </div>
           <div class="media media--tall">
@@ -64,10 +62,10 @@ nav: index
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="label">Produktserien vår</span>
-              <h2 id="mv-title">MicroVant-adjuvanser</h2>
+              <span class="label">{{t.mv.kicker1}}</span>
+              <h2 id="mv-title">{{t.mv.heading1}}</h2>
             </div>
-            <a class="text-link" href="technology.html">Slik virker MicroVant</a>
+            <a class="text-link" href="technology.html">{{t.mv.link1}}</a>
           </div>
 
           <div class="carousel" data-carousel role="group" aria-roledescription="karusell" aria-label="MicroVant-produktserien">
@@ -75,24 +73,24 @@ nav: index
               <img class="mv-logo" src="{{root}}assets/logo/microvant-horizontal-negative.svg" alt="MicroVant" width="190" height="67" loading="lazy">
               <div class="carousel-viewport" aria-live="polite">
                 <div class="slide" role="group" aria-roledescription="lysbilde" aria-label="1 av 4">
-                  <h3>Micro-Gen</h3>
-                  <p>En generell injiserbar adjuvansformulering for et bredt utvalg fiskevaksiner.</p>
-                  <span class="status">Endelig validering gjenstår</span>
+                  <h3>{{t.mv.subheading1}}</h3>
+                  <p>{{t.mv.text1}}</p>
+                  <span class="status">{{t.mv.status1}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="lysbilde" aria-label="2 av 4">
-                  <h3>Micro-Sal</h3>
-                  <p>En injiserbar formulering utviklet for vaksiner til laks, ørret og annen laksefisk.</p>
-                  <span class="status">Endelig validering gjenstår</span>
+                  <h3>{{t.mv.subheading2}}</h3>
+                  <p>{{t.mv.text2}}</p>
+                  <span class="status">{{t.mv.status2}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="lysbilde" aria-label="3 av 4">
-                  <h3>Micro-Til</h3>
-                  <p>En injiserbar formulering utviklet for vaksiner til tilapia, en av artene med raskest vekst i oppdrett.</p>
-                  <span class="status">Endelig validering gjenstår</span>
+                  <h3>{{t.mv.subheading3}}</h3>
+                  <p>{{t.mv.text3}}</p>
+                  <span class="status">{{t.mv.status3}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="lysbilde" aria-label="4 av 4">
-                  <h3>Immunstimulanter</h3>
-                  <p>Neste trinn: egenutviklede formuleringer som skal gjøre vaksinene mer effektive.</p>
-                  <span class="status">Under utvikling</span>
+                  <h3>{{t.mv.subheading4}}</h3>
+                  <p>{{t.mv.text4}}</p>
+                  <span class="status">{{t.mv.status4}}</span>
                 </div>
               </div>
               <div class="carousel-controls">
@@ -119,16 +117,16 @@ nav: index
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="label">Slik jobber vi</span>
-              <h2 id="work-title">Vi jobber gjennom vaksineprodusentene.</h2>
-              <p class="lead">Kundene våre er selskapene som lager fiskevaksiner. Et samarbeid følger som regel fire trinn.</p>
+              <span class="label">{{t.work.kicker1}}</span>
+              <h2 id="work-title">{{t.work.heading1}}</h2>
+              <p class="lead">{{t.work.intro1}}</p>
             </div>
           </div>
           <ol class="steps">
-            <li><h3>Samtale</h3><p>Vi starter med art, vaksineformat og behovene i produksjonen deres.</p></li>
-            <li><h3>Evaluering</h3><p>Felles formuleringsarbeid og testing i deres egen FoU.</p></li>
-            <li><h3>Kvalifisering</h3><p>Dokumentasjon, kvalitetskontroll og sikker forsyning.</p></li>
-            <li><h3>Leveranse</h3><p>En kommersiell avtale om levering av adjuvansen.</p></li>
+            <li><h3>{{t.work.subheading1}}</h3><p>{{t.work.text1}}</p></li>
+            <li><h3>{{t.work.subheading2}}</h3><p>{{t.work.text2}}</p></li>
+            <li><h3>{{t.work.subheading3}}</h3><p>{{t.work.text3}}</p></li>
+            <li><h3>{{t.work.subheading4}}</h3><p>{{t.work.text4}}</p></li>
           </ol>
         </div>
       </section>
@@ -139,10 +137,10 @@ nav: index
             <img src="{{root}}assets/img/production-800.jpg" srcset="{{root}}assets/img/production-800.jpg 800w, {{root}}assets/img/production.jpg 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="1600" height="900" alt="Produksjonstanker i rustfritt stål i en lys hall med ettermiddagssol" loading="lazy">
           </div>
           <div>
-            <span class="label">Tjenester</span>
-            <h2 id="services-title">Kompetanse rundt hele vaksinen.</h2>
-            <p class="lead">I tillegg til adjuvansen gir vi produsenter råd om vaksineproduksjon, om utstyr for manuell og automatisk vaksinering og om kliniske studier i laboratoriet og i felt.</p>
-            <div class="btn-row"><a class="btn btn--ocean" href="services.html">Se tjenestene våre</a></div>
+            <span class="label">{{t.services.kicker1}}</span>
+            <h2 id="services-title">{{t.services.heading1}}</h2>
+            <p class="lead">{{t.services.intro1}}</p>
+            <div class="btn-row"><a class="btn btn--ocean" href="services.html">{{t.services.button1}}</a></div>
           </div>
         </div>
       </section>
@@ -151,30 +149,30 @@ nav: index
         <div class="container">
           <div class="block block--ocean block--glow on-dark team-block">
             <div class="team-intro">
-              <span class="label">Teamet</span>
-              <h2 id="team-title">Bygget av spesialister på fiskevaksiner.</h2>
-              <p class="lead">Grunnleggerne våre har jobbet med fiskehelse, immunologi, FoU, regulatoriske saker og kommersialisering, i globale dyrehelseselskaper og i havbruksbioteknologi.</p>
-              <div class="btn-row"><a class="btn btn--outline-light" href="about.html#team-title">Møt grunnleggerne</a></div>
+              <span class="label">{{t.team.kicker1}}</span>
+              <h2 id="team-title">{{t.team.heading1}}</h2>
+              <p class="lead">{{t.team.intro1}}</p>
+              <div class="btn-row"><a class="btn btn--outline-light" href="about.html#team-title">{{t.team.button1}}</a></div>
             </div>
             <!-- The two founders are equal partners: same card, same size, alphabetical by surname. -->
             <div class="founders">
               <a class="founder" href="about.html#team-title">
                 <span class="founder-photo"><img src="{{root}}assets/img/team/kjetil-fyrand.jpg" alt="Portrett av Kjetil Fyrand" width="600" height="750" loading="lazy"></span>
-                <span class="founder-name">Kjetil Fyrand</span>
-                <span class="founder-role">Medgründer</span>
-                <span class="founder-focus">Fiskehelse og vaksine-FoU, over 25 år</span>
+                <span class="founder-name">{{t.team.name1}}</span>
+                <span class="founder-role">{{t.team.role1}}</span>
+                <span class="founder-focus">{{t.team.focus1}}</span>
               </a>
               <a class="founder" href="about.html#team-title">
-                <span class="founder-photo founder-photo--initials" aria-hidden="true">CX</span>
-                <span class="founder-name">Dr. Cheng Xu</span>
-                <span class="founder-role">Medgründer</span>
-                <span class="founder-focus">Fiskevaksiner og immunologi, over 20 år</span>
+                <span class="founder-photo founder-photo--initials" aria-hidden="true">{{t.team.initials1}}</span>
+                <span class="founder-name">{{t.team.name2}}</span>
+                <span class="founder-role">{{t.team.role2}}</span>
+                <span class="founder-focus">{{t.team.focus2}}</span>
               </a>
             </div>
             <div class="stat-row team-stats">
-              <div class="stat"><strong>45+</strong><span>års samlet erfaring med fiskevaksiner</span></div>
-              <div class="stat"><strong>3</strong><span>MicroVant-formuleringer, endelig validering gjenstår</span></div>
-              <div class="stat"><strong>2</strong><span>artsgrupper i fokus: laksefisk og tilapia</span></div>
+              <div class="stat"><strong>{{t.team.highlight1}}</strong><span>{{t.team.text1}}</span></div>
+              <div class="stat"><strong>{{t.team.highlight2}}</strong><span>{{t.team.text2}}</span></div>
+              <div class="stat"><strong>{{t.team.highlight3}}</strong><span>{{t.team.text3}}</span></div>
             </div>
           </div>
         </div>
@@ -184,10 +182,10 @@ nav: index
         <div class="container">
           <div class="block cta">
             <div>
-              <h2 id="cta-title">La oss snakke om samarbeid.</h2>
-              <p>Vi vil gjerne høre fra vaksineprodusenter, havbruksselskaper og investorer.</p>
+              <h2 id="cta-title">{{t.cta.heading1}}</h2>
+              <p>{{t.cta.text1}}</p>
             </div>
-            <a class="btn" href="contact.html">Kontakt AquaVant</a>
+            <a class="btn" href="contact.html">{{t.cta.button1}}</a>
           </div>
         </div>
       </section>

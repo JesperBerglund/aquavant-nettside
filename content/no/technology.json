@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Adjuvanser til fiskevaksiner: MicroVant-serien | AquaVant",
+    "description": "Hva en vaksineadjuvans gjør, hvordan en fiskevaksin lages med den, og hvordan MicroVant-serien er laget for vaksiner til laksefisk og tilapia."
+  },
+  "page": {
+    "link1": "Hjem",
+    "item1": "Teknologi",
+    "title1": "Adjuvanser laget for fiskevaksiner.",
+    "intro1": "Hva en adjuvans gjør, hvordan en fiskevaksin lages med den, og hvordan MicroVant-serien er utviklet for vaksineprodusenter."
+  },
+  "s2": {
+    "term1": "Fokus",
+    "detail1": "Adjuvanser til injiserbare fiskevaksiner",
+    "term2": "Produktserie",
+    "detail2": "MicroVant™",
+    "term3": "Arter",
+    "detail3": "Laksefisk og tilapia",
+    "term4": "Kunder",
+    "detail4": "Vaksineprodusenter"
+  },
+  "what": {
+    "kicker1": "Hva en adjuvans gjør",
+    "heading1": "Antigenet viser målet. Adjuvansen hjelper fisken å reagere.",
+    "intro1": "En vaksine lærer immunforsvaret å kjenne igjen en sykdom. Antigenet er den delen immunforsvaret lærer å kjenne igjen. Adjuvansen tilsettes for at immunforsvaret skal reagere sterkere. I injiserbare fiskevaksiner er adjuvansen avgjørende for hvor godt vaksinen virker.",
+    "subheading1": "Antigen",
+    "text1": "Fra vaksineprodusenten. Den delen av sykdomsfremkalleren som immunforsvaret til fisken lærer å kjenne igjen.",
+    "subheading2": "MicroVant-adjuvans",
+    "text2": "Fra AquaVant. Tilsettes vaksinen for å styrke immunresponsen mot antigenet.",
+    "subheading3": "Immunrespons",
+    "text3": "I fisken. Antistoffer og immunologisk hukommelse som bidrar til å beskytte mot sykdom.",
+    "text4": "Forenklet illustrasjon, ikke i målestokk."
+  },
+  "made": {
+    "kicker1": "Hvor vi kommer inn",
+    "heading1": "Slik lages en fiskevaksin med MicroVant.",
+    "intro1": "AquaVant leverer adjuvansen. Vaksineprodusenten leverer antigenet og lager vaksinen.",
+    "caption1": "Forenklet illustrasjon.",
+    "highlight1": "Antigen",
+    "text1": "Utviklet og produsert av vaksineprodusenten.",
+    "highlight2": "MicroVant-adjuvans",
+    "text2": "Levert ferdig til bruk fra AquaVant.",
+    "highlight3": "Formulering",
+    "text3": "Produsenten blander antigen og adjuvans til ferdig vaksine.",
+    "highlight4": "Vaksinering",
+    "text4": "Fisken vaksineres med injeksjon, manuelt eller med automatisk utstyr."
+  },
+  "series": {
+    "heading1": "MicroVant-serien",
+    "intro1": "MicroVant er AquaVants produktserie innen adjuvansteknologi. Formuleringene er ferdige til bruk og tilpasset fiskeart, vaksineformat og produksjonsbehovene til kundene våre.",
+    "subheading1": "Micro-Gen",
+    "text1": "Generell injiserbar adjuvansformulering for et bredt utvalg fiskevaksiner.",
+    "status1": "Endelig validering gjenstår",
+    "subheading2": "Micro-Sal",
+    "text2": "Injiserbar formulering utviklet for vaksiner til laksefisk.",
+    "status2": "Endelig validering gjenstår",
+    "subheading3": "Micro-Til",
+    "text3": "Injiserbar formulering utviklet for vaksiner til tilapia.",
+    "status3": "Endelig validering gjenstår",
+    "subheading4": "Immunstimulanter",
+    "text4": "Neste trinn: egenutviklede formuleringer som skal øke vaksinenes effekt.",
+    "status4": "Under utvikling"
+  },
+  "species": {
+    "kicker1": "Hvor vi starter",
+    "heading1": "Laksefisk og tilapia.",
+    "intro1": "To artsgrupper med ulike behov: den ene med etablert vaksinebruk, den andre med store volumer og økende vaksinebruk.",
+    "subheading1": "Laksefisk",
+    "text1": "I oppdrett av laks og ørret er vaksinering godt etablert. Grunnleggerne våre kjenner adjuvanssammensetningen og dokumentasjonen disse vaksinene krever. Vi jobber med globale produsenter og med produsenter av autogene (anleggsspesifikke) vaksiner.",
+    "subheading2": "Tilapia",
+    "text2": "Tilapia oppdrettes i store volumer, og bruken av vaksiner øker. Vi jobber med lokale vaksineprodusenter og større legemiddelselskaper."
+  },
+  "cta": {
+    "heading1": "Test MicroVant sammen med oss.",
+    "text1": "Vi samarbeider med vaksineprodusenter om formulering og testing. Fortell oss om arten og vaksineformatet dere jobber med.",
+    "button1": "Kontakt AquaVant"
+  }
+}

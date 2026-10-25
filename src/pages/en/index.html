@@ -1,9 +1,7 @@
 <!--
-title: AquaVant | Adjuvants for fish vaccines in aquaculture
-description: AquaVant is an Oslo biotech company developing MicroVant, a series of adjuvants for fish vaccine manufacturers in global aquaculture.
 nav: index
 -->
-    <!-- Scroll sequence (after seasats.com): the calm ocean loops, then a whale fluke
+<!-- Scroll sequence (after seasats.com): the calm ocean loops, then a whale fluke
          rises frame by frame as the visitor scrolls. Frames live in assets/whale/. -->
     <section class="whale" data-whale data-frames="{{root}}assets/whale/" data-count="168" aria-labelledby="hero-title">
       <div class="whale-pin hero deep">
@@ -14,11 +12,11 @@ nav: index
         </video>
       </div>
       <div class="container hero-content">
-        <h1 id="hero-title">Advancing vaccines for healthier aquaculture.</h1>
-        <p class="lead">AquaVant develops MicroVant, a series of adjuvants that help fish vaccines work. We supply them to the companies that make the vaccines.</p>
+        <h1 id="hero-title">{{t.hero.title1}}</h1>
+        <p class="lead">{{t.hero.intro1}}</p>
         <div class="btn-row">
-          <a class="btn" href="technology.html">Explore the technology</a>
-          <a class="btn btn--outline-light" href="contact.html">Partner with us</a>
+          <a class="btn" href="technology.html">{{t.hero.button1}}</a>
+          <a class="btn btn--outline-light" href="contact.html">{{t.hero.button2}}</a>
         </div>
       </div>
       <button class="video-toggle" type="button" aria-pressed="false" aria-label="Pause background video" data-label-pause="Pause background video" data-label-play="Play background video">
@@ -30,12 +28,12 @@ nav: index
 
     <section class="band" aria-label="About AquaVant in brief">
       <div class="container">
-        <p class="statement">We are an Oslo biotechnology company focused on one part of the fish vaccine: the adjuvant. <span class="soft">It is the ingredient that helps a vaccinated fish’s immune system respond, and the field our founders have worked in for more than 45 combined years.</span></p>
+        <p class="statement">{{t.s2.statement1}} <span class="soft">{{t.s2.soft1}}</span></p>
         <div class="band-body">
-          <p>We do not make vaccines. We develop ready-to-use adjuvant formulations for the companies that do, and support them with advice on vaccine production, vaccination equipment and clinical trials.</p>
+          <p>{{t.s2.text1}}</p>
           <div>
-            <p>Our first formulations are built for salmonids and tilapia, two of the largest groups of farmed fish.</p>
-            <div class="btn-row"><a class="btn btn--light" href="about.html">About AquaVant</a></div>
+            <p>{{t.s2.text2}}</p>
+            <div class="btn-row"><a class="btn btn--light" href="about.html">{{t.s2.button1}}</a></div>
           </div>
         </div>
       </div>
@@ -45,13 +43,13 @@ nav: index
       <section class="section" aria-labelledby="need-title">
         <div class="container split split--wide-text">
           <div>
-            <span class="label">Why it matters</span>
-            <h2 id="need-title">Healthy fish need vaccines that work.</h2>
-            <p class="lead measure">Disease is one of the biggest challenges in fish farming. Vaccines help prevent it, and the adjuvant is a critical part of every injectable fish vaccine.</p>
+            <span class="label">{{t.need.kicker1}}</span>
+            <h2 id="need-title">{{t.need.heading1}}</h2>
+            <p class="lead measure">{{t.need.intro1}}</p>
             <ul class="points">
-              <li><strong>Disease pressure</strong><p>Preventing disease remains a major challenge for aquaculture worldwide.</p></li>
-              <li><strong>Antibiotic use</strong><p>Where vaccines are hard to get, many markets still rely heavily on antibiotics.</p></li>
-              <li><strong>Few specialists</strong><p>Adjuvant supply for fish vaccines is fragmented, so manufacturers have few dedicated partners to turn to.</p></li>
+              <li><strong>{{t.need.highlight1}}</strong><p>{{t.need.text1}}</p></li>
+              <li><strong>{{t.need.highlight2}}</strong><p>{{t.need.text2}}</p></li>
+              <li><strong>{{t.need.highlight3}}</strong><p>{{t.need.text3}}</p></li>
             </ul>
           </div>
           <div class="media media--tall">
@@ -64,10 +62,10 @@ nav: index
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="label">Our product series</span>
-              <h2 id="mv-title">MicroVant adjuvants</h2>
+              <span class="label">{{t.mv.kicker1}}</span>
+              <h2 id="mv-title">{{t.mv.heading1}}</h2>
             </div>
-            <a class="text-link" href="technology.html">How MicroVant works</a>
+            <a class="text-link" href="technology.html">{{t.mv.link1}}</a>
           </div>
 
           <div class="carousel" data-carousel role="group" aria-roledescription="carousel" aria-label="MicroVant product series">
@@ -75,24 +73,24 @@ nav: index
               <img class="mv-logo" src="{{root}}assets/logo/microvant-horizontal-negative.svg" alt="MicroVant" width="190" height="67" loading="lazy">
               <div class="carousel-viewport" aria-live="polite">
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
-                  <h3>Micro-Gen</h3>
-                  <p>A general injectable adjuvant formulation for a broad range of fish vaccines.</p>
-                  <span class="status">Final validation pending</span>
+                  <h3>{{t.mv.subheading1}}</h3>
+                  <p>{{t.mv.text1}}</p>
+                  <span class="status">{{t.mv.status1}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
-                  <h3>Micro-Sal</h3>
-                  <p>An injectable formulation developed for vaccines for salmon, trout and other salmonids.</p>
-                  <span class="status">Final validation pending</span>
+                  <h3>{{t.mv.subheading2}}</h3>
+                  <p>{{t.mv.text2}}</p>
+                  <span class="status">{{t.mv.status2}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
-                  <h3>Micro-Til</h3>
-                  <p>An injectable formulation developed for tilapia vaccines, for one of the fastest-growing farmed species.</p>
-                  <span class="status">Final validation pending</span>
+                  <h3>{{t.mv.subheading3}}</h3>
+                  <p>{{t.mv.text3}}</p>
+                  <span class="status">{{t.mv.status3}}</span>
                 </div>
                 <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
-                  <h3>Immunostimulants</h3>
-                  <p>The next layer: proprietary formulations intended to make vaccines more effective.</p>
-                  <span class="status">In development</span>
+                  <h3>{{t.mv.subheading4}}</h3>
+                  <p>{{t.mv.text4}}</p>
+                  <span class="status">{{t.mv.status4}}</span>
                 </div>
               </div>
               <div class="carousel-controls">
@@ -119,16 +117,16 @@ nav: index
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="label">How we work</span>
-              <h2 id="work-title">We work through vaccine manufacturers.</h2>
-              <p class="lead">Our customers are the companies that make fish vaccines. A partnership usually follows four steps.</p>
+              <span class="label">{{t.work.kicker1}}</span>
+              <h2 id="work-title">{{t.work.heading1}}</h2>
+              <p class="lead">{{t.work.intro1}}</p>
             </div>
           </div>
           <ol class="steps">
-            <li><h3>Talk</h3><p>We start with your species, vaccine format and manufacturing needs.</p></li>
-            <li><h3>Evaluate</h3><p>Joint formulation work and testing in your own R&amp;D.</p></li>
-            <li><h3>Qualify</h3><p>Documentation, quality control and a secure supply chain.</p></li>
-            <li><h3>Supply</h3><p>A commercial agreement for delivery of the adjuvant.</p></li>
+            <li><h3>{{t.work.subheading1}}</h3><p>{{t.work.text1}}</p></li>
+            <li><h3>{{t.work.subheading2}}</h3><p>{{t.work.text2}}</p></li>
+            <li><h3>{{t.work.subheading3}}</h3><p>{{t.work.text3}}</p></li>
+            <li><h3>{{t.work.subheading4}}</h3><p>{{t.work.text4}}</p></li>
           </ol>
         </div>
       </section>
@@ -139,10 +137,10 @@ nav: index
             <img src="{{root}}assets/img/production-800.jpg" srcset="{{root}}assets/img/production-800.jpg 800w, {{root}}assets/img/production.jpg 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="1600" height="900" alt="Stainless-steel production vessels in a bright hall lit by afternoon sun" loading="lazy">
           </div>
           <div>
-            <span class="label">Services</span>
-            <h2 id="services-title">Expertise around the whole vaccine.</h2>
-            <p class="lead">Beyond the adjuvant, we advise manufacturers on vaccine production, on equipment for manual and automatic vaccination, and on clinical trials in the lab and in the field.</p>
-            <div class="btn-row"><a class="btn btn--ocean" href="services.html">See our services</a></div>
+            <span class="label">{{t.services.kicker1}}</span>
+            <h2 id="services-title">{{t.services.heading1}}</h2>
+            <p class="lead">{{t.services.intro1}}</p>
+            <div class="btn-row"><a class="btn btn--ocean" href="services.html">{{t.services.button1}}</a></div>
           </div>
         </div>
       </section>
@@ -151,30 +149,30 @@ nav: index
         <div class="container">
           <div class="block block--ocean block--glow on-dark team-block">
             <div class="team-intro">
-              <span class="label">The team</span>
-              <h2 id="team-title">Built by fish-vaccine specialists.</h2>
-              <p class="lead">Our founders have worked in fish health, immunology, R&amp;D, regulatory affairs and commercialisation, at global animal-health companies and in aquaculture biotech.</p>
-              <div class="btn-row"><a class="btn btn--outline-light" href="about.html#team-title">Meet the founders</a></div>
+              <span class="label">{{t.team.kicker1}}</span>
+              <h2 id="team-title">{{t.team.heading1}}</h2>
+              <p class="lead">{{t.team.intro1}}</p>
+              <div class="btn-row"><a class="btn btn--outline-light" href="about.html#team-title">{{t.team.button1}}</a></div>
             </div>
             <!-- The two founders are equal partners: same card, same size, alphabetical by surname. -->
             <div class="founders">
               <a class="founder" href="about.html#team-title">
                 <span class="founder-photo"><img src="{{root}}assets/img/team/kjetil-fyrand.jpg" alt="Portrait of Kjetil Fyrand" width="600" height="750" loading="lazy"></span>
-                <span class="founder-name">Kjetil Fyrand</span>
-                <span class="founder-role">Co-founder</span>
-                <span class="founder-focus">Fish health and vaccine R&amp;D, 25+ years</span>
+                <span class="founder-name">{{t.team.name1}}</span>
+                <span class="founder-role">{{t.team.role1}}</span>
+                <span class="founder-focus">{{t.team.focus1}}</span>
               </a>
               <a class="founder" href="about.html#team-title">
-                <span class="founder-photo founder-photo--initials" aria-hidden="true">CX</span>
-                <span class="founder-name">Dr. Cheng Xu</span>
-                <span class="founder-role">Co-founder</span>
-                <span class="founder-focus">Fish vaccines and immunology, 20+ years</span>
+                <span class="founder-photo founder-photo--initials" aria-hidden="true">{{t.team.initials1}}</span>
+                <span class="founder-name">{{t.team.name2}}</span>
+                <span class="founder-role">{{t.team.role2}}</span>
+                <span class="founder-focus">{{t.team.focus2}}</span>
               </a>
             </div>
             <div class="stat-row team-stats">
-              <div class="stat"><strong>45+</strong><span>years of combined fish-vaccine experience</span></div>
-              <div class="stat"><strong>3</strong><span>MicroVant formulations, final validation pending</span></div>
-              <div class="stat"><strong>2</strong><span>species groups in focus: salmonids and tilapia</span></div>
+              <div class="stat"><strong>{{t.team.highlight1}}</strong><span>{{t.team.text1}}</span></div>
+              <div class="stat"><strong>{{t.team.highlight2}}</strong><span>{{t.team.text2}}</span></div>
+              <div class="stat"><strong>{{t.team.highlight3}}</strong><span>{{t.team.text3}}</span></div>
             </div>
           </div>
         </div>
@@ -184,10 +182,10 @@ nav: index
         <div class="container">
           <div class="block cta">
             <div>
-              <h2 id="cta-title">Let’s talk partnership.</h2>
-              <p>We would like to hear from vaccine manufacturers, aquaculture companies and investors.</p>
+              <h2 id="cta-title">{{t.cta.heading1}}</h2>
+              <p>{{t.cta.text1}}</p>
             </div>
-            <a class="btn" href="contact.html">Contact AquaVant</a>
+            <a class="btn" href="contact.html">{{t.cta.button1}}</a>
           </div>
         </div>
       </section>

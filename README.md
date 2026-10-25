@@ -11,7 +11,7 @@ Tre kommandoer er alt du trenger. Åpne Terminal i denne mappen (høyreklikk map
 | `npm run check` | Bygger og sjekker hele nettsiden: døde lenker, manglende bilder og andre feil. Står det «All good» til slutt, er alt i orden |
 
 Tommelfingerregler som hindrer problemer:
-- **Endre tekst i `src/pages/`**, aldri i `public/`. `public/` lages på nytt hver gang og overskrives.
+- **Tekst endres i `content/`** (eller i redigeringsverktøyet, se «Endre tekst»), aldri i `public/`. `public/` lages på nytt hver gang og overskrives.
 - **Endre alltid begge språk** (`en` og `no`).
 - **Kjør `npm run check` før du publiserer.**
 - **Ikke flytt eller gi nytt navn til filer i `public/assets/`.** Sidene peker på dem.
@@ -26,8 +26,10 @@ Siden er på engelsk (rot) og norsk (`/no/`), med fem hovedsider per språk: Hom
 
 | Sti | Innhold |
 |---|---|
-| `src/pages/en/*.html` | Teksten og innholdet på de engelske sidene |
-| `src/pages/no/*.html` | Det samme på norsk |
+| `content/en/*.json`, `content/no/*.json` | All synlig tekst, én fil per side og språk, pluss SEO-tittel og -beskrivelse |
+| `content/site.json` | E-postadresser, org.nr. og LinkedIn-lenke (gjelder alle sider) |
+| `.pages.yml` | Oppsettet for redigeringsverktøyet Pages CMS: hvilke felt kunden ser |
+| `src/pages/en/*.html`, `src/pages/no/*.html` | Oppsettet (HTML) for hver side. Teksten hentes inn fra `content/` der det står `{{t.seksjon.felt}}` |
 | `build.mjs` | Felles meny, bunntekst, SEO-tagger, språkbytte og sitemap. Lager ferdige sider i `public/` |
 | `public/` | Den ferdige nettsiden. Det er denne mappen som publiseres |
 | `public/assets/` | CSS, JavaScript, fonter, logoer, bilder og video |
@@ -37,19 +39,22 @@ Siden er på engelsk (rot) og norsk (`/no/`), med fem hovedsider per språk: Hom
 
 ## Endre tekst
 
-1. Rediger filen i `src/pages/en/` eller `src/pages/no/`. Øverst i hver fil står SEO-tittel og metabeskrivelse.
-2. Kjør `npm run build`. Det oppdaterer alle sidene i `public/`.
-3. Se resultatet med `npm start` og åpne http://localhost:8090.
-4. Kjør `npm run check` for å se at alt fortsatt virker.
+**Enklest: i nettleseren med Pages CMS** (https://app.pagescms.org). Logg inn med GitHub, velg `aquavant-nettside`, velg side og språk, endre teksten i feltene og trykk **Save**. Netlify publiserer endringen automatisk i løpet av et par minutter. Alle tidligere versjoner ligger i GitHub og kan hentes tilbake.
 
-Meny, bunntekst, e-postadresse, org.nr. og LinkedIn-lenke ligger i toppen av `build.mjs` og endres ett sted for alle sider.
+**På egen maskin:**
+1. Endre teksten i `content/en/<side>.json` eller `content/no/<side>.json`. E-post, org.nr. og LinkedIn ligger i `content/site.json`.
+2. Kjør `npm run check`. Det bygger sidene og sjekker at alt virker.
+3. Se resultatet med `npm start` og åpne http://localhost:8090.
+4. Lagre til GitHub (commit og push). Netlify publiserer automatisk.
+
+Vil du endre selve oppsettet (nye seksjoner, flere felt), endres `src/pages/` og `content/` sammen, og `.pages.yml` må få de nye feltene. Meny- og bunntekstord ligger i toppen av `build.mjs`.
 
 Husk å endre begge språk når innholdet endres.
 
 ## Før lansering – gjenstår
 
-- **Org.nr.** står som `[000 000 000]`. Endre `ORG_NO` i `build.mjs`.
-- **LinkedIn**: endre `LINKEDIN` i `build.mjs` til selskapets side.
+- **Org.nr.** står som `[000 000 000]`. Fyll inn under «Company details» i Pages CMS (eller `orgno` i `content/site.json`).
+- **LinkedIn**: fyll inn selskapets side under «Company details» (eller `linkedin` i `content/site.json`).
 - **Portretter**: Kjetil Fyrand har portrett (`public/assets/img/team/kjetil-fyrand.jpg`, originalen ligger i `Bilder/Team/` i prosjektmappen). Cheng Xu vises fortsatt med initialer. Legg bilder i `public/assets/img/team/` (stående, ca. 600 × 750 px) og bytt `<div class="portrait">KF</div>` med `<div class="portrait"><img src="{{root}}assets/img/team/kjetil-fyrand.jpg" alt="Kjetil Fyrand" width="600" height="750"></div>` på About-sidene.
 - **Personvernerklæringen**: dato («sist oppdatert») og lagringstid står i [hakeparentes] og må bekreftes av AquaVant.
 - **Godkjenning av tekst**: all tekst bygger på materialet fra kunden. AquaVant må godkjenne alt om teknologien, produktnavnene og grunnleggerne. Punktlistene under hver tjeneste på Services-siden er forslag og må bekreftes spesielt.

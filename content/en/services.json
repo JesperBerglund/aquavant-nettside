@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Services for fish vaccine manufacturers | AquaVant",
+    "description": "Advice on fish vaccine production, vaccination equipment and clinical trials, from specialists with more than 45 combined years in fish vaccines."
+  },
+  "page": {
+    "link1": "Home",
+    "item1": "Services",
+    "title1": "Expertise around the whole vaccine.",
+    "intro1": "The adjuvant is our product. Around it, we help manufacturers with production, vaccination equipment and clinical trials."
+  },
+  "services": {
+    "kicker1": "What we offer",
+    "heading1": "One partner for the adjuvant and the know-how around it.",
+    "intro1": "Our founders have spent their careers developing, producing and registering fish vaccines. We put that experience to work for our customers.",
+    "subheading1": "MicroVant adjuvants",
+    "text1": "Ready-to-use adjuvant formulations for injectable fish vaccines, developed for salmonids and tilapia. We work with you on formulation and testing until the adjuvant is qualified for your vaccine.",
+    "button1": "About the technology",
+    "subheading2": "Vaccine production",
+    "text2": "Advice on producing fish vaccines and on the equipment you need to do it.",
+    "item1": "Production processes and scale-up",
+    "item2": "Choice of production equipment",
+    "item3": "Quality and documentation requirements",
+    "subheading3": "Vaccination equipment",
+    "text3": "Advice on equipment for giving vaccines to fish, by hand or with automatic machines.",
+    "item4": "Manual vaccination",
+    "item5": "Automatic vaccination systems",
+    "item6": "Matching equipment to vaccine and fish size",
+    "subheading4": "Clinical trials",
+    "text4": "Advice on planning and running vaccine trials, in the laboratory and in the field.",
+    "item7": "Trial design",
+    "item8": "Laboratory and field trials",
+    "item9": "Documentation for regulatory submissions",
+    "subheading5": "Technical support",
+    "text5": "Help with putting a new adjuvant into use, from the first formulation trials to routine production.",
+    "item10": "Formulation support",
+    "item11": "Customer R&D testing",
+    "item12": "Ongoing technical follow-up"
+  },
+  "who": {
+    "kicker1": "Who we work with",
+    "heading1": "Built for the companies that make fish vaccines.",
+    "highlight1": "Global manufacturers",
+    "text1": "Animal-health companies with established fish vaccine portfolios.",
+    "highlight2": "Local producers",
+    "text2": "Regional vaccine makers, including producers of autogenous (farm-specific) vaccines.",
+    "highlight3": "Aquaculture companies",
+    "text3": "Fish farmers and partners who want to understand vaccine options."
+  },
+  "cta": {
+    "heading1": "Tell us what you are working on.",
+    "text1": "Whether you need an adjuvant, advice on production or help with a trial, we are happy to talk.",
+    "button1": "Contact AquaVant"
+  }
+}

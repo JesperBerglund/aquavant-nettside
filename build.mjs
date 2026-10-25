@@ -13,10 +13,13 @@ const fingerprint = (rel) => createHash("sha1").update(readFileSync(join(ROOT, "
 const V = { css: fingerprint("assets/css/styles.css"), js: fingerprint("assets/js/main.js"), lenis: fingerprint("assets/js/vendor/lenis.min.js") };
 const OUT = join(ROOT, "public");
 const SITE = "https://aquavant.no";
-const EMAIL = "kjetil.fyrand@aquavant.no";
-const EMAIL2 = "cheng.xu@aquavant.no";
-const ORG_NO = "[000 000 000]";
-const LINKEDIN = "https://www.linkedin.com/";
+// Company details and all page text live in content/ (edited in Pages CMS, see .pages.yml).
+const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), "utf8"));
+const COMPANY = readJson("content/site.json");
+const EMAIL = COMPANY.email.trim();
+const EMAIL2 = COMPANY.email2.trim();
+const ORG_NO = (COMPANY.orgno || "").trim() || "[000 000 000]";
+const LINKEDIN = (COMPANY.linkedin || "").trim() || "https://www.linkedin.com/";
 
 const PAGES = ["index", "technology", "services", "about", "contact", "privacy", "404"];
 
@@ -173,9 +176,9 @@ function layout(lang, key, meta, body) {
       <div class="menu-foot">
         <p class="menu-tagline">${t.menuTagline}</p>
         <div class="menu-contact">
-          <a href="mailto:${EMAIL}">${EMAIL}</a>
-          <a href="mailto:${EMAIL2}">${EMAIL2}</a>
-          <a href="${LINKEDIN}" rel="noopener">${t.linkedin}</a>
+          <a href="mailto:${esc(EMAIL)}">${EMAIL}</a>
+          <a href="mailto:${esc(EMAIL2)}">${EMAIL2}</a>
+          <a href="${esc(LINKEDIN)}" rel="noopener">${t.linkedin}</a>
         </div>
       </div>
     </div>
@@ -212,9 +215,9 @@ ${body.replace(/\{\{root\}\}/g, r).replace(/\{\{email\}\}/g, EMAIL).replace(/\{\
         <div class="footer-col">
           <h2>${t.connect}</h2>
           <ul>
-            <li><a href="mailto:${EMAIL}">${t.email} Kjetil</a></li>
-            <li><a href="mailto:${EMAIL2}">${t.email} Cheng</a></li>
-            <li><a href="${LINKEDIN}" rel="noopener">${t.linkedin}</a></li>
+            <li><a href="mailto:${esc(EMAIL)}">${t.email} Kjetil</a></li>
+            <li><a href="mailto:${esc(EMAIL2)}">${t.email} Cheng</a></li>
+            <li><a href="${esc(LINKEDIN)}" rel="noopener">${t.linkedin}</a></li>
             <li><a href="${link("privacy")}">${t.privacy}</a></li>
           </ul>
         </div>
@@ -240,8 +243,16 @@ for (const lang of ["en", "no"]) {
   for (const f of files) {
     const key = f.replace(/\.html$/, "");
     if (!PAGES.includes(key)) throw new Error(`Unknown page ${lang}/${f}`);
-    const { meta, body } = parse(readFileSync(join(dir, f), "utf8"));
-    if (!meta.title || !meta.description) throw new Error(`${lang}/${f} needs title and description`);
+    const { meta, body: template } = parse(readFileSync(join(dir, f), "utf8"));
+    const text = readJson(`content/${lang}/${key}.json`);
+    Object.assign(meta, text.seo);
+    if (!meta.title || !meta.description) throw new Error(`content/${lang}/${key}.json needs a page title and description`);
+    // {{t.section.field}} in the page template is filled with that text from the content file.
+    const body = template.replace(/\{\{t\.([\w-]+)\.([\w-]+)\}\}/g, (_, s, k) => {
+      const v = text[s]?.[k];
+      if (typeof v !== "string") throw new Error(`content/${lang}/${key}.json is missing ${s}.${k}`);
+      return v.trim().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    });
     const outDir = join(OUT, L[lang].dir);
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, pageFile(key)), layout(lang, key, meta, body));

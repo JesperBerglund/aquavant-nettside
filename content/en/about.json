@@ -1,0 +1,56 @@
+{
+  "seo": {
+    "title": "About AquaVant | Fish vaccine specialists in Oslo",
+    "description": "AquaVant AS is an Oslo-based biotech company founded by fish-vaccine specialists with more than 45 years of combined experience."
+  },
+  "page": {
+    "link1": "Home",
+    "item1": "About",
+    "title1": "Specialists in fish vaccine adjuvants.",
+    "intro1": "AquaVant AS is an Oslo-based biotechnology and aquaculture company, founded by people who have spent their careers on fish vaccines."
+  },
+  "s2": {
+    "statement1": "Our ambition is to become the dedicated adjuvant partner for fish vaccine manufacturers worldwide.",
+    "soft1": "Better vaccines mean healthier fish, and less need for antibiotics in aquaculture."
+  },
+  "story": {
+    "kicker1": "Background",
+    "heading1": "Why we started AquaVant.",
+    "text1": "Vaccines are one of the most important tools for keeping farmed fish healthy. The adjuvant is a critical part of an injectable fish vaccine, yet few suppliers specialise in adjuvants made for fish.",
+    "text2": "Our founders saw that gap after decades of developing and registering fish vaccines for global animal-health companies. AquaVant was set up to fill it: a company that focuses on the adjuvant, and works through the manufacturers that make the vaccines.",
+    "text3": "We are based in Oslo, close to one of the world’s leading aquaculture industries, and work with customers internationally."
+  },
+  "team": {
+    "kicker1": "The founders",
+    "heading1": "More than 45 years of combined fish-vaccine experience.",
+    "intro1": "Depth in fish health, immunology, R&D, regulatory affairs and commercialisation.",
+    "subheading1": "Kjetil Fyrand",
+    "text1": "Co-founder",
+    "item1": "MSc in Veterinary and Fish Health Sciences",
+    "item2": "25+ years in fish vaccine research and development",
+    "item3": "Director roles at major global animal-health companies",
+    "item4": "Regulatory submissions across Europe, the Americas and Asia-Pacific",
+    "text2": "CX",
+    "subheading2": "Dr. Cheng Xu",
+    "text3": "Co-founder",
+    "item5": "PhD in Veterinary Science",
+    "item6": "20+ years in fish vaccines and immunology",
+    "item7": "Inventor on vaccine-related publications and patents",
+    "item8": "Former head of R&D at an aquaculture biologics company in China"
+  },
+  "path": {
+    "kicker1": "Our path",
+    "heading1": "From validated formulations to first supply.",
+    "subheading1": "Build the base",
+    "text1": "Set up laboratory, quality systems and suppliers, and finalise the MicroVant formulations.",
+    "subheading2": "Validate and qualify",
+    "text2": "Validate manufacturing, prepare documentation and work with customers on testing.",
+    "subheading3": "Supply",
+    "text3": "Enter the first commercial supply agreements with vaccine manufacturers."
+  },
+  "cta": {
+    "heading1": "Work with us.",
+    "text1": "We would like to hear from vaccine manufacturers, aquaculture companies and investors.",
+    "button1": "Contact AquaVant"
+  }
+}

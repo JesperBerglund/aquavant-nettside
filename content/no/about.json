@@ -1,0 +1,56 @@
+{
+  "seo": {
+    "title": "Om AquaVant | Spesialister på fiskevaksiner i Oslo",
+    "description": "AquaVant AS er et biotekselskap i Oslo, grunnlagt av spesialister på fiskevaksiner med over 45 års samlet erfaring."
+  },
+  "page": {
+    "link1": "Hjem",
+    "item1": "Om oss",
+    "title1": "Spesialister på adjuvanser til fiskevaksiner.",
+    "intro1": "AquaVant AS er et bioteknologi- og havbruksselskap i Oslo, grunnlagt av folk som har brukt karrieren sin på fiskevaksiner."
+  },
+  "s2": {
+    "statement1": "Ambisjonen vår er å bli den foretrukne adjuvanspartneren for produsenter av fiskevaksiner over hele verden.",
+    "soft1": "Bedre vaksiner gir friskere fisk og mindre behov for antibiotika i havbruket."
+  },
+  "story": {
+    "kicker1": "Bakgrunn",
+    "heading1": "Hvorfor vi startet AquaVant.",
+    "text1": "Vaksiner er et av de viktigste verktøyene for å holde oppdrettsfisk frisk. Adjuvansen er en avgjørende del av en injiserbar fiskevaksine, men få leverandører spesialiserer seg på adjuvanser laget for fisk.",
+    "text2": "Grunnleggerne våre så dette gapet etter flere tiår med utvikling og registrering av fiskevaksiner for globale dyrehelseselskaper. AquaVant ble etablert for å fylle det: et selskap som konsentrerer seg om adjuvansen og jobber gjennom produsentene som lager vaksinene.",
+    "text3": "Vi holder til i Oslo, nær en av verdens ledende havbruksnæringer, og jobber med kunder internasjonalt."
+  },
+  "team": {
+    "kicker1": "Grunnleggerne",
+    "heading1": "Over 45 års samlet erfaring med fiskevaksiner.",
+    "intro1": "Dyp kunnskap om fiskehelse, immunologi, FoU, regulatoriske saker og kommersialisering.",
+    "subheading1": "Kjetil Fyrand",
+    "text1": "Medgründer",
+    "item1": "MSc i veterinær- og fiskehelsefag",
+    "item2": "Over 25 år med forskning og utvikling av fiskevaksiner",
+    "item3": "Lederroller i store globale dyrehelseselskaper",
+    "item4": "Regulatoriske søknader i Europa, Amerika og Asia–Stillehavsregionen",
+    "text2": "CX",
+    "subheading2": "Dr. Cheng Xu",
+    "text3": "Medgründer",
+    "item5": "PhD i veterinærvitenskap",
+    "item6": "Over 20 år med fiskevaksiner og immunologi",
+    "item7": "Oppfinner på vaksinerelaterte publikasjoner og patenter",
+    "item8": "Tidligere FoU-sjef i et selskap for biologiske havbruksprodukter i Kina"
+  },
+  "path": {
+    "kicker1": "Veien videre",
+    "heading1": "Fra validerte formuleringer til første leveranse.",
+    "subheading1": "Bygge grunnmuren",
+    "text1": "Etablere laboratorium, kvalitetssystemer og leverandører, og ferdigstille MicroVant-formuleringene.",
+    "subheading2": "Validere og kvalifisere",
+    "text2": "Validere produksjonen, utarbeide dokumentasjon og teste sammen med kunder.",
+    "subheading3": "Levere",
+    "text3": "Inngå de første kommersielle leveranseavtalene med vaksineprodusenter."
+  },
+  "cta": {
+    "heading1": "Samarbeid med oss.",
+    "text1": "Vi vil gjerne høre fra vaksineprodusenter, havbruksselskaper og investorer.",
+    "button1": "Kontakt AquaVant"
+  }
+}

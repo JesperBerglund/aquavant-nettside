@@ -1,0 +1,913 @@
+# Pages CMS (https://pagescms.org): the form-based editor for the website text.
+# Each page has one file per language in content/. The layout and design are not editable here.
+content:
+  - name: company
+    label: "Company details (all pages)"
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: email, label: "Email, first contact (Kjetil)", type: string, required: true }
+      - { name: email2, label: "Email, second contact (Cheng)", type: string, required: true }
+      - { name: orgno, label: "Organisation number", type: string }
+      - { name: linkedin, label: "LinkedIn page (full web address)", type: string }
+  - name: english
+    label: "English pages"
+    type: group
+    items:
+      - name: en-index
+        label: "Home"
+        type: file
+        path: content/en/index.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: hero
+            label: "Section: Advancing vaccines for healthier aquaculture."
+            type: object
+            fields:
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text 1", type: string }
+              - { name: button2, label: "Button text 2", type: string }
+          - name: s2
+            label: "Section: We are an Oslo biotechnology company focused o…"
+            type: object
+            fields:
+              - { name: statement1, label: "Statement", type: text }
+              - { name: soft1, label: "Second part (lighter text)", type: text }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: button1, label: "Button text", type: string }
+          - name: need
+            label: "Section: Healthy fish need vaccines that work."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: text }
+          - name: mv
+            label: "Section: MicroVant adjuvants"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: link1, label: "Link text", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: status1, label: "Status tag 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: status2, label: "Status tag 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: text }
+              - { name: status3, label: "Status tag 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: status4, label: "Status tag 4", type: string }
+          - name: work
+            label: "Section: We work through vaccine manufacturers."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: services
+            label: "Section: Expertise around the whole vaccine."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text", type: string }
+          - name: team
+            label: "Section: Built by fish-vaccine specialists."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text", type: string }
+              - { name: name1, label: "Name 1", type: string }
+              - { name: role1, label: "Role 1", type: string }
+              - { name: focus1, label: "Expertise line 1", type: string }
+              - { name: initials1, label: "Initials (shown when there is no photo)", type: string }
+              - { name: name2, label: "Name 2", type: string }
+              - { name: role2, label: "Role 2", type: string }
+              - { name: focus2, label: "Expertise line 2", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Section: Let’s talk partnership."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: en-technology
+        label: "Technology"
+        type: file
+        path: content/en/technology.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: Adjuvants built for fish vaccines."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Section: Focus"
+            type: object
+            fields:
+              - { name: term1, label: "Term 1", type: string }
+              - { name: detail1, label: "Detail 1", type: string }
+              - { name: term2, label: "Term 2", type: string }
+              - { name: detail2, label: "Detail 2", type: string }
+              - { name: term3, label: "Term 3", type: string }
+              - { name: detail3, label: "Detail 3", type: string }
+              - { name: term4, label: "Term 4", type: string }
+              - { name: detail4, label: "Detail 4", type: string }
+          - name: what
+            label: "Section: The antigen shows the target. The adjuvant hel…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: made
+            label: "Section: How a fish vaccine is made with MicroVant."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: caption1, label: "Caption", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: highlight4, label: "Highlighted text 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: series
+            label: "Section: The MicroVant series"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: status1, label: "Status tag 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: status2, label: "Status tag 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: status3, label: "Status tag 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: status4, label: "Status tag 4", type: string }
+          - name: species
+            label: "Section: Salmonids and tilapia."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: text }
+          - name: cta
+            label: "Section: Evaluate MicroVant with us."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: text }
+              - { name: button1, label: "Button text", type: string }
+      - name: en-services
+        label: "Services"
+        type: file
+        path: content/en/services.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: Expertise around the whole vaccine."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: services
+            label: "Section: One partner for the adjuvant and the know-how…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: button1, label: "Button text", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: item1, label: "List item 1", type: string }
+              - { name: item2, label: "List item 2", type: string }
+              - { name: item3, label: "List item 3", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: item4, label: "List item 4", type: string }
+              - { name: item5, label: "List item 5", type: string }
+              - { name: item6, label: "List item 6", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: item7, label: "List item 7", type: string }
+              - { name: item8, label: "List item 8", type: string }
+              - { name: item9, label: "List item 9", type: string }
+              - { name: subheading5, label: "Subheading 5", type: string }
+              - { name: text5, label: "Text 5", type: text }
+              - { name: item10, label: "List item 10", type: string }
+              - { name: item11, label: "List item 11", type: string }
+              - { name: item12, label: "List item 12", type: string }
+          - name: who
+            label: "Section: Built for the companies that make fish vaccines."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Section: Tell us what you are working on."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: text }
+              - { name: button1, label: "Button text", type: string }
+      - name: en-about
+        label: "About"
+        type: file
+        path: content/en/about.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: Specialists in fish vaccine adjuvants."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Section: Our ambition is to become the dedicated adjuva…"
+            type: object
+            fields:
+              - { name: statement1, label: "Statement", type: text }
+              - { name: soft1, label: "Second part (lighter text)", type: string }
+          - name: story
+            label: "Section: Why we started AquaVant."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: text3, label: "Text 3", type: text }
+          - name: team
+            label: "Section: More than 45 years of combined fish-vaccine ex…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: item1, label: "List item 1", type: string }
+              - { name: item2, label: "List item 2", type: string }
+              - { name: item3, label: "List item 3", type: string }
+              - { name: item4, label: "List item 4", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: item5, label: "List item 5", type: string }
+              - { name: item6, label: "List item 6", type: string }
+              - { name: item7, label: "List item 7", type: string }
+              - { name: item8, label: "List item 8", type: string }
+          - name: path
+            label: "Section: From validated formulations to first supply."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Section: Work with us."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: en-contact
+        label: "Contact"
+        type: file
+        path: content/en/contact.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: Let’s talk partnership."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Section: Get in touch"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+              - { name: term1, label: "Term 1", type: string }
+              - { name: term2, label: "Term 2", type: string }
+              - { name: term3, label: "Term 3", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: term4, label: "Term 4", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: text3, label: "Text 3", type: string, description: "Leave the {{...}} parts as they are. They are filled in automatically from Company details." }
+              - { name: field1, label: "Form field name 1", type: string }
+              - { name: field2, label: "Form field name 2", type: string }
+              - { name: field3, label: "Form field name 3", type: string }
+              - { name: field4, label: "Form field name 4", type: string }
+              - { name: option1, label: "Dropdown choice 1", type: string }
+              - { name: option2, label: "Dropdown choice 2", type: string }
+              - { name: option3, label: "Dropdown choice 3", type: string }
+              - { name: option4, label: "Dropdown choice 4", type: string }
+              - { name: option5, label: "Dropdown choice 5", type: string }
+              - { name: option6, label: "Dropdown choice 6", type: string }
+              - { name: field5, label: "Form field name 5", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: text5, label: "Text 5", type: string }
+              - { name: link1, label: "Link text", type: string }
+              - { name: text6, label: "Text 6", type: string }
+              - { name: text7, label: "Text 7", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: en-privacy
+        label: "Privacy policy"
+        type: file
+        path: content/en/privacy.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: Privacy policy"
+            type: object
+            fields:
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+          - name: s2
+            label: "Section: Who is responsible"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading 1", type: string }
+              - { name: text1, label: "Text 1", type: text, description: "Leave the {{...}} parts as they are. They are filled in automatically from Company details." }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: heading2, label: "Heading 2", type: string }
+              - { name: text3, label: "Text 3", type: text }
+              - { name: heading3, label: "Heading 3", type: string }
+              - { name: text4, label: "Text 4", type: text }
+              - { name: text5, label: "Text 5", type: text }
+              - { name: text6, label: "Text 6", type: text }
+              - { name: heading4, label: "Heading 4", type: string }
+              - { name: text7, label: "Text 7", type: text }
+      - name: en-404
+        label: "Page not found (404)"
+        type: file
+        path: content/en/404.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Section: This page does not exist."
+            type: object
+            fields:
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+              - { name: button1, label: "Button text 1", type: string }
+              - { name: button2, label: "Button text 2", type: string }
+  - name: norsk
+    label: "Norske sider"
+    type: group
+    items:
+      - name: no-index
+        label: "Home"
+        type: file
+        path: content/no/index.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: hero
+            label: "Seksjon: Bedre vaksiner for et sunnere havbruk."
+            type: object
+            fields:
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text 1", type: string }
+              - { name: button2, label: "Button text 2", type: string }
+          - name: s2
+            label: "Seksjon: Vi er et bioteknologiselskap i Oslo som jobber…"
+            type: object
+            fields:
+              - { name: statement1, label: "Statement", type: text }
+              - { name: soft1, label: "Second part (lighter text)", type: text }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: button1, label: "Button text", type: string }
+          - name: need
+            label: "Seksjon: Frisk fisk trenger vaksiner som virker."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: text }
+          - name: mv
+            label: "Seksjon: MicroVant-adjuvanser"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: link1, label: "Link text", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: status1, label: "Status tag 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: status2, label: "Status tag 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: text }
+              - { name: status3, label: "Status tag 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: status4, label: "Status tag 4", type: string }
+          - name: work
+            label: "Seksjon: Vi jobber gjennom vaksineprodusentene."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: services
+            label: "Seksjon: Kompetanse rundt hele vaksinen."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text", type: string }
+          - name: team
+            label: "Seksjon: Bygget av spesialister på fiskevaksiner."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: button1, label: "Button text", type: string }
+              - { name: name1, label: "Name 1", type: string }
+              - { name: role1, label: "Role 1", type: string }
+              - { name: focus1, label: "Expertise line 1", type: string }
+              - { name: initials1, label: "Initials (shown when there is no photo)", type: string }
+              - { name: name2, label: "Name 2", type: string }
+              - { name: role2, label: "Role 2", type: string }
+              - { name: focus2, label: "Expertise line 2", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Seksjon: La oss snakke om samarbeid."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: no-technology
+        label: "Technology"
+        type: file
+        path: content/no/technology.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Seksjon: Adjuvanser laget for fiskevaksiner."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Seksjon: Fokus"
+            type: object
+            fields:
+              - { name: term1, label: "Term 1", type: string }
+              - { name: detail1, label: "Detail 1", type: string }
+              - { name: term2, label: "Term 2", type: string }
+              - { name: detail2, label: "Detail 2", type: string }
+              - { name: term3, label: "Term 3", type: string }
+              - { name: detail3, label: "Detail 3", type: string }
+              - { name: term4, label: "Term 4", type: string }
+              - { name: detail4, label: "Detail 4", type: string }
+          - name: what
+            label: "Seksjon: Antigenet viser målet. Adjuvansen hjelper fisk…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: made
+            label: "Seksjon: Slik lages en fiskevaksin med MicroVant."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: caption1, label: "Caption", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: highlight4, label: "Highlighted text 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+          - name: series
+            label: "Seksjon: MicroVant-serien"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: status1, label: "Status tag 1", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: status2, label: "Status tag 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: status3, label: "Status tag 3", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: status4, label: "Status tag 4", type: string }
+          - name: species
+            label: "Seksjon: Laksefisk og tilapia."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: text }
+          - name: cta
+            label: "Seksjon: Test MicroVant sammen med oss."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: text }
+              - { name: button1, label: "Button text", type: string }
+      - name: no-services
+        label: "Services"
+        type: file
+        path: content/no/services.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Seksjon: Kompetanse rundt hele vaksinen."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: services
+            label: "Seksjon: Én partner for adjuvansen og kunnskapen rundt…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: button1, label: "Button text", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: item1, label: "List item 1", type: string }
+              - { name: item2, label: "List item 2", type: string }
+              - { name: item3, label: "List item 3", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: item4, label: "List item 4", type: string }
+              - { name: item5, label: "List item 5", type: string }
+              - { name: item6, label: "List item 6", type: string }
+              - { name: subheading4, label: "Subheading 4", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: item7, label: "List item 7", type: string }
+              - { name: item8, label: "List item 8", type: string }
+              - { name: item9, label: "List item 9", type: string }
+              - { name: subheading5, label: "Subheading 5", type: string }
+              - { name: text5, label: "Text 5", type: text }
+              - { name: item10, label: "List item 10", type: string }
+              - { name: item11, label: "List item 11", type: string }
+              - { name: item12, label: "List item 12", type: string }
+          - name: who
+            label: "Seksjon: Laget for selskapene som lager fiskevaksiner."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: highlight1, label: "Highlighted text 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: highlight2, label: "Highlighted text 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: highlight3, label: "Highlighted text 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Seksjon: Fortell oss hva dere jobber med."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: text }
+              - { name: button1, label: "Button text", type: string }
+      - name: no-about
+        label: "About"
+        type: file
+        path: content/no/about.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Seksjon: Spesialister på adjuvanser til fiskevaksiner."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Seksjon: Ambisjonen vår er å bli den foretrukne adjuvan…"
+            type: object
+            fields:
+              - { name: statement1, label: "Statement", type: text }
+              - { name: soft1, label: "Second part (lighter text)", type: string }
+          - name: story
+            label: "Seksjon: Hvorfor vi startet AquaVant."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: text2, label: "Text 2", type: text }
+              - { name: text3, label: "Text 3", type: text }
+          - name: team
+            label: "Seksjon: Over 45 års samlet erfaring med fiskevaksiner."
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: item1, label: "List item 1", type: string }
+              - { name: item2, label: "List item 2", type: string }
+              - { name: item3, label: "List item 3", type: string }
+              - { name: item4, label: "List item 4", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text3, label: "Text 3", type: string }
+              - { name: item5, label: "List item 5", type: string }
+              - { name: item6, label: "List item 6", type: string }
+              - { name: item7, label: "List item 7", type: string }
+              - { name: item8, label: "List item 8", type: string }
+          - name: path
+            label: "Seksjon: Fra validerte formuleringer til første leveran…"
+            type: object
+            fields:
+              - { name: kicker1, label: "Small label above heading", type: string }
+              - { name: heading1, label: "Heading", type: string }
+              - { name: subheading1, label: "Subheading 1", type: string }
+              - { name: text1, label: "Text 1", type: text }
+              - { name: subheading2, label: "Subheading 2", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: subheading3, label: "Subheading 3", type: string }
+              - { name: text3, label: "Text 3", type: string }
+          - name: cta
+            label: "Seksjon: Samarbeid med oss."
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: text1, label: "Text", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: no-contact
+        label: "Contact"
+        type: file
+        path: content/no/contact.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Seksjon: La oss snakke om samarbeid."
+            type: object
+            fields:
+              - { name: link1, label: "Link text", type: string }
+              - { name: item1, label: "List item", type: string }
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: text }
+          - name: s2
+            label: "Seksjon: Ta kontakt"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+              - { name: term1, label: "Term 1", type: string }
+              - { name: term2, label: "Term 2", type: string }
+              - { name: term3, label: "Term 3", type: string }
+              - { name: text1, label: "Text 1", type: string }
+              - { name: term4, label: "Term 4", type: string }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: text3, label: "Text 3", type: string, description: "Leave the {{...}} parts as they are. They are filled in automatically from Company details." }
+              - { name: field1, label: "Form field name 1", type: string }
+              - { name: field2, label: "Form field name 2", type: string }
+              - { name: field3, label: "Form field name 3", type: string }
+              - { name: field4, label: "Form field name 4", type: string }
+              - { name: option1, label: "Dropdown choice 1", type: string }
+              - { name: option2, label: "Dropdown choice 2", type: string }
+              - { name: option3, label: "Dropdown choice 3", type: string }
+              - { name: option4, label: "Dropdown choice 4", type: string }
+              - { name: option5, label: "Dropdown choice 5", type: string }
+              - { name: option6, label: "Dropdown choice 6", type: string }
+              - { name: field5, label: "Form field name 5", type: string }
+              - { name: text4, label: "Text 4", type: string }
+              - { name: text5, label: "Text 5", type: string }
+              - { name: link1, label: "Link text", type: string }
+              - { name: text6, label: "Text 6", type: string }
+              - { name: text7, label: "Text 7", type: string }
+              - { name: button1, label: "Button text", type: string }
+      - name: no-privacy
+        label: "Privacy policy"
+        type: file
+        path: content/no/privacy.json
+        format: json
+        fields:
+          - name: seo
+            label: "Google: page title and description"
+            type: object
+            fields:
+              - { name: title, label: "Page title (shown in Google and the browser tab)", type: string, required: true }
+              - { name: description, label: "Description (shown under the title in Google)", type: text }
+          - name: page
+            label: "Seksjon: Personvernerklæring"
+            type: object
+            fields:
+              - { name: title1, label: "Main heading", type: string }
+              - { name: intro1, label: "Intro text", type: string }
+          - name: s2
+            label: "Seksjon: Hvem som er ansvarlig"
+            type: object
+            fields:
+              - { name: heading1, label: "Heading 1", type: string }
+              - { name: text1, label: "Text 1", type: text, description: "Leave the {{...}} parts as they are. They are filled in automatically from Company details." }
+              - { name: text2, label: "Text 2", type: string }
+              - { name: heading2, label: "Heading 2", type: string }
+              - { name: text3, label: "Text 3", type: text }
+              - { name: heading3, label: "Heading 3", type: string }
+              - { name: text4, label: "Text 4", type: text }
+              - { name: text5, label: "Text 5", type: text }
+              - { name: text6, label: "Text 6", type: text }
+              - { name: heading4, label: "Heading 4", type: string }
+              - { name: text7, label: "Text 7", type: text }

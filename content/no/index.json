@@ -1,0 +1,90 @@
+{
+  "seo": {
+    "title": "AquaVant | Adjuvanser til fiskevaksiner i havbruk",
+    "description": "AquaVant er et biotekselskap i Oslo som utvikler MicroVant, en serie adjuvanser for produsenter av fiskevaksiner i global havbruksnæring."
+  },
+  "hero": {
+    "title1": "Bedre vaksiner for et sunnere havbruk.",
+    "intro1": "AquaVant utvikler MicroVant, en serie adjuvanser som får fiskevaksiner til å virke. Vi leverer dem til selskapene som lager vaksinene.",
+    "button1": "Utforsk teknologien",
+    "button2": "Bli samarbeidspartner"
+  },
+  "s2": {
+    "statement1": "Vi er et bioteknologiselskap i Oslo som jobber med én del av fiskevaksinen: adjuvansen.",
+    "soft1": "Det er ingrediensen som hjelper immunforsvaret til en vaksinert fisk å reagere, og et fagfelt grunnleggerne våre til sammen har over 45 års erfaring fra.",
+    "text1": "Vi lager ikke vaksiner selv. Vi utvikler ferdige adjuvansformuleringer til selskapene som gjør det, og gir dem råd om vaksineproduksjon, vaksinasjonsutstyr og kliniske studier.",
+    "text2": "De første formuleringene våre er laget for laksefisk og tilapia, to av de største gruppene oppdrettsfisk.",
+    "button1": "Om AquaVant"
+  },
+  "need": {
+    "kicker1": "Hvorfor det betyr noe",
+    "heading1": "Frisk fisk trenger vaksiner som virker.",
+    "intro1": "Sykdom er en av de største utfordringene i fiskeoppdrett. Vaksiner hjelper med å forebygge den, og adjuvansen er en avgjørende del av alle injiserbare fiskevaksiner.",
+    "highlight1": "Sykdomspress",
+    "text1": "Å forebygge sykdom er fortsatt en stor utfordring for havbruk over hele verden.",
+    "highlight2": "Antibiotikabruk",
+    "text2": "Der vaksiner er vanskelige å få tak i, er mange markeder fortsatt avhengige av antibiotika.",
+    "highlight3": "Få spesialister",
+    "text3": "Tilgangen på adjuvanser til fiskevaksiner er fragmentert, så produsentene har få spesialiserte partnere å velge mellom."
+  },
+  "mv": {
+    "kicker1": "Produktserien vår",
+    "heading1": "MicroVant-adjuvanser",
+    "link1": "Slik virker MicroVant",
+    "subheading1": "Micro-Gen",
+    "text1": "En generell injiserbar adjuvansformulering for et bredt utvalg fiskevaksiner.",
+    "status1": "Endelig validering gjenstår",
+    "subheading2": "Micro-Sal",
+    "text2": "En injiserbar formulering utviklet for vaksiner til laks, ørret og annen laksefisk.",
+    "status2": "Endelig validering gjenstår",
+    "subheading3": "Micro-Til",
+    "text3": "En injiserbar formulering utviklet for vaksiner til tilapia, en av artene med raskest vekst i oppdrett.",
+    "status3": "Endelig validering gjenstår",
+    "subheading4": "Immunstimulanter",
+    "text4": "Neste trinn: egenutviklede formuleringer som skal gjøre vaksinene mer effektive.",
+    "status4": "Under utvikling"
+  },
+  "work": {
+    "kicker1": "Slik jobber vi",
+    "heading1": "Vi jobber gjennom vaksineprodusentene.",
+    "intro1": "Kundene våre er selskapene som lager fiskevaksiner. Et samarbeid følger som regel fire trinn.",
+    "subheading1": "Samtale",
+    "text1": "Vi starter med art, vaksineformat og behovene i produksjonen deres.",
+    "subheading2": "Evaluering",
+    "text2": "Felles formuleringsarbeid og testing i deres egen FoU.",
+    "subheading3": "Kvalifisering",
+    "text3": "Dokumentasjon, kvalitetskontroll og sikker forsyning.",
+    "subheading4": "Leveranse",
+    "text4": "En kommersiell avtale om levering av adjuvansen."
+  },
+  "services": {
+    "kicker1": "Tjenester",
+    "heading1": "Kompetanse rundt hele vaksinen.",
+    "intro1": "I tillegg til adjuvansen gir vi produsenter råd om vaksineproduksjon, om utstyr for manuell og automatisk vaksinering og om kliniske studier i laboratoriet og i felt.",
+    "button1": "Se tjenestene våre"
+  },
+  "team": {
+    "kicker1": "Teamet",
+    "heading1": "Bygget av spesialister på fiskevaksiner.",
+    "intro1": "Grunnleggerne våre har jobbet med fiskehelse, immunologi, FoU, regulatoriske saker og kommersialisering, i globale dyrehelseselskaper og i havbruksbioteknologi.",
+    "button1": "Møt grunnleggerne",
+    "name1": "Kjetil Fyrand",
+    "role1": "Medgründer",
+    "focus1": "Fiskehelse og vaksine-FoU, over 25 år",
+    "initials1": "CX",
+    "name2": "Dr. Cheng Xu",
+    "role2": "Medgründer",
+    "focus2": "Fiskevaksiner og immunologi, over 20 år",
+    "highlight1": "45+",
+    "text1": "års samlet erfaring med fiskevaksiner",
+    "highlight2": "3",
+    "text2": "MicroVant-formuleringer, endelig validering gjenstår",
+    "highlight3": "2",
+    "text3": "artsgrupper i fokus: laksefisk og tilapia"
+  },
+  "cta": {
+    "heading1": "La oss snakke om samarbeid.",
+    "text1": "Vi vil gjerne høre fra vaksineprodusenter, havbruksselskaper og investorer.",
+    "button1": "Kontakt AquaVant"
+  }
+}

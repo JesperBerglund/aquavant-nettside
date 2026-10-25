@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "Personvernerklæring | AquaVant",
+    "description": "Slik behandler AquaVant AS personopplysninger på aquavant.no."
+  },
+  "page": {
+    "title1": "Personvernerklæring",
+    "intro1": "Slik behandler AquaVant AS personopplysninger på dette nettstedet. Sist oppdatert [dato]."
+  },
+  "s2": {
+    "heading1": "Hvem som er ansvarlig",
+    "text1": "AquaVant AS (org.nr. {{orgno}}), Oslo, er behandlingsansvarlig for personopplysningene som er beskrevet her. Kontakt oss på",
+    "text2": "eller",
+    "heading2": "Ingen informasjonskapsler eller sporing",
+    "text3": "Nettstedet bruker ikke informasjonskapsler (cookies), analyseverktøy eller sporing. Skrifter, bilder og video hentes fra vårt eget nettsted, så besøket ditt deles ikke med tredjeparter som Google.",
+    "heading3": "Kontaktskjemaet",
+    "text4": "Når du sender oss en melding, mottar vi navn, e-postadresse, organisasjon (hvis oppgitt) og meldingen din. Vi bruker opplysningene bare til å svare på henvendelsen og følge opp et eventuelt samarbeid. Behandlingsgrunnlaget er samtykket ditt og vår berettigede interesse i å svare på henvendelser (personvernforordningen artikkel 6 nr. 1 bokstav a og f).",
+    "text5": "Skjemaet sender ingenting fra nettstedet. Når du trykker send, åpner ditt eget e-postprogram en melding til oss med opplysningene dine utfylt, og du sender den selv. Meldingen går deretter via din og vår e-postleverandør som en vanlig e-post.",
+    "text6": "Vi tar vare på henvendelser så lenge det trengs for å behandle dem, og ikke lenger enn [12 måneder] med mindre de fører til et samarbeid.",
+    "heading4": "Rettighetene dine",
+    "text7": "Du kan be om innsyn i, retting av eller sletting av personopplysningene dine, og du kan trekke tilbake samtykket når som helst. Send oss en e-post på adressen over. Mener du at vi behandler opplysningene dine i strid med regelverket, kan du klage til Datatilsynet."
+  }
+}

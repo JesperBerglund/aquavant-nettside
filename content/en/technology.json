@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Fish vaccine adjuvants: the MicroVant series | AquaVant",
+    "description": "What a vaccine adjuvant does, how a fish vaccine is made with it, and how the MicroVant series is built for salmonid and tilapia vaccines."
+  },
+  "page": {
+    "link1": "Home",
+    "item1": "Technology",
+    "title1": "Adjuvants built for fish vaccines.",
+    "intro1": "What an adjuvant does, how a fish vaccine is made with it, and how the MicroVant series is designed for vaccine manufacturers."
+  },
+  "s2": {
+    "term1": "Focus",
+    "detail1": "Adjuvants for injectable fish vaccines",
+    "term2": "Product series",
+    "detail2": "MicroVant™",
+    "term3": "Species",
+    "detail3": "Salmonids and tilapia",
+    "term4": "Customers",
+    "detail4": "Vaccine manufacturers"
+  },
+  "what": {
+    "kicker1": "What an adjuvant does",
+    "heading1": "The antigen shows the target. The adjuvant helps the fish respond.",
+    "intro1": "A vaccine teaches the immune system to recognise a disease. The antigen is the part it learns to recognise. The adjuvant is added so the immune system responds more strongly. In injectable fish vaccines, the adjuvant is critical to how well the vaccine works.",
+    "subheading1": "Antigen",
+    "text1": "From the vaccine manufacturer. The part of the pathogen the fish’s immune system learns to recognise.",
+    "subheading2": "MicroVant adjuvant",
+    "text2": "From AquaVant. Added to the vaccine to strengthen the immune response to the antigen.",
+    "subheading3": "Immune response",
+    "text3": "In the fish. Antibodies and immune memory that help protect against disease.",
+    "text4": "Simplified illustration, not to scale."
+  },
+  "made": {
+    "kicker1": "How it fits in",
+    "heading1": "How a fish vaccine is made with MicroVant.",
+    "intro1": "AquaVant supplies the adjuvant. The vaccine manufacturer supplies the antigen and makes the vaccine.",
+    "caption1": "Simplified illustration.",
+    "highlight1": "Antigen",
+    "text1": "Developed and produced by the vaccine manufacturer.",
+    "highlight2": "MicroVant adjuvant",
+    "text2": "Supplied by AquaVant, ready to use.",
+    "highlight3": "Formulation",
+    "text3": "The manufacturer combines antigen and adjuvant into the finished vaccine.",
+    "highlight4": "Vaccination",
+    "text4": "Fish are vaccinated by injection, by hand or with automatic equipment."
+  },
+  "series": {
+    "heading1": "The MicroVant series",
+    "intro1": "MicroVant is AquaVant’s product series of adjuvant technology. The formulations are ready to use and designed around fish species, vaccine format and our customers’ manufacturing needs.",
+    "subheading1": "Micro-Gen",
+    "text1": "General injectable adjuvant formulation for a broad range of fish vaccines.",
+    "status1": "Final validation pending",
+    "subheading2": "Micro-Sal",
+    "text2": "Injectable formulation developed for salmonid vaccines.",
+    "status2": "Final validation pending",
+    "subheading3": "Micro-Til",
+    "text3": "Injectable formulation developed for tilapia vaccines.",
+    "status3": "Final validation pending",
+    "subheading4": "Immunostimulants",
+    "text4": "The next layer: proprietary formulations intended to increase vaccine efficacy.",
+    "status4": "In development"
+  },
+  "species": {
+    "kicker1": "Where we start",
+    "heading1": "Salmonids and tilapia.",
+    "intro1": "Two species groups with different needs: one with established vaccine use, one with large volumes and growing vaccine adoption.",
+    "subheading1": "Salmonids",
+    "text1": "Salmon and trout farming has well-established vaccine use. Our founders know the adjuvant composition and documentation these vaccines require. We work with global manufacturers and with makers of autogenous (farm-specific) vaccines.",
+    "subheading2": "Tilapia",
+    "text2": "Tilapia is farmed in large volumes, and vaccine use is increasing. We work with local vaccine producers and larger pharmaceutical companies."
+  },
+  "cta": {
+    "heading1": "Evaluate MicroVant with us.",
+    "text1": "We work with vaccine manufacturers on joint formulation and testing. Tell us about your species and vaccine format.",
+    "button1": "Contact AquaVant"
+  }
+}

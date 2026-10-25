@@ -1,0 +1,90 @@
+{
+  "seo": {
+    "title": "AquaVant | Adjuvants for fish vaccines in aquaculture",
+    "description": "AquaVant is an Oslo biotech company developing MicroVant, a series of adjuvants for fish vaccine manufacturers in global aquaculture."
+  },
+  "hero": {
+    "title1": "Advancing vaccines for healthier aquaculture.",
+    "intro1": "AquaVant develops MicroVant, a series of adjuvants that help fish vaccines work. We supply them to the companies that make the vaccines.",
+    "button1": "Explore the technology",
+    "button2": "Partner with us"
+  },
+  "s2": {
+    "statement1": "We are an Oslo biotechnology company focused on one part of the fish vaccine: the adjuvant.",
+    "soft1": "It is the ingredient that helps a vaccinated fish’s immune system respond, and the field our founders have worked in for more than 45 combined years.",
+    "text1": "We do not make vaccines. We develop ready-to-use adjuvant formulations for the companies that do, and support them with advice on vaccine production, vaccination equipment and clinical trials.",
+    "text2": "Our first formulations are built for salmonids and tilapia, two of the largest groups of farmed fish.",
+    "button1": "About AquaVant"
+  },
+  "need": {
+    "kicker1": "Why it matters",
+    "heading1": "Healthy fish need vaccines that work.",
+    "intro1": "Disease is one of the biggest challenges in fish farming. Vaccines help prevent it, and the adjuvant is a critical part of every injectable fish vaccine.",
+    "highlight1": "Disease pressure",
+    "text1": "Preventing disease remains a major challenge for aquaculture worldwide.",
+    "highlight2": "Antibiotic use",
+    "text2": "Where vaccines are hard to get, many markets still rely heavily on antibiotics.",
+    "highlight3": "Few specialists",
+    "text3": "Adjuvant supply for fish vaccines is fragmented, so manufacturers have few dedicated partners to turn to."
+  },
+  "mv": {
+    "kicker1": "Our product series",
+    "heading1": "MicroVant adjuvants",
+    "link1": "How MicroVant works",
+    "subheading1": "Micro-Gen",
+    "text1": "A general injectable adjuvant formulation for a broad range of fish vaccines.",
+    "status1": "Final validation pending",
+    "subheading2": "Micro-Sal",
+    "text2": "An injectable formulation developed for vaccines for salmon, trout and other salmonids.",
+    "status2": "Final validation pending",
+    "subheading3": "Micro-Til",
+    "text3": "An injectable formulation developed for tilapia vaccines, for one of the fastest-growing farmed species.",
+    "status3": "Final validation pending",
+    "subheading4": "Immunostimulants",
+    "text4": "The next layer: proprietary formulations intended to make vaccines more effective.",
+    "status4": "In development"
+  },
+  "work": {
+    "kicker1": "How we work",
+    "heading1": "We work through vaccine manufacturers.",
+    "intro1": "Our customers are the companies that make fish vaccines. A partnership usually follows four steps.",
+    "subheading1": "Talk",
+    "text1": "We start with your species, vaccine format and manufacturing needs.",
+    "subheading2": "Evaluate",
+    "text2": "Joint formulation work and testing in your own R&D.",
+    "subheading3": "Qualify",
+    "text3": "Documentation, quality control and a secure supply chain.",
+    "subheading4": "Supply",
+    "text4": "A commercial agreement for delivery of the adjuvant."
+  },
+  "services": {
+    "kicker1": "Services",
+    "heading1": "Expertise around the whole vaccine.",
+    "intro1": "Beyond the adjuvant, we advise manufacturers on vaccine production, on equipment for manual and automatic vaccination, and on clinical trials in the lab and in the field.",
+    "button1": "See our services"
+  },
+  "team": {
+    "kicker1": "The team",
+    "heading1": "Built by fish-vaccine specialists.",
+    "intro1": "Our founders have worked in fish health, immunology, R&D, regulatory affairs and commercialisation, at global animal-health companies and in aquaculture biotech.",
+    "button1": "Meet the founders",
+    "name1": "Kjetil Fyrand",
+    "role1": "Co-founder",
+    "focus1": "Fish health and vaccine R&D, 25+ years",
+    "initials1": "CX",
+    "name2": "Dr. Cheng Xu",
+    "role2": "Co-founder",
+    "focus2": "Fish vaccines and immunology, 20+ years",
+    "highlight1": "45+",
+    "text1": "years of combined fish-vaccine experience",
+    "highlight2": "3",
+    "text2": "MicroVant formulations, final validation pending",
+    "highlight3": "2",
+    "text3": "species groups in focus: salmonids and tilapia"
+  },
+  "cta": {
+    "heading1": "Let’s talk partnership.",
+    "text1": "We would like to hear from vaccine manufacturers, aquaculture companies and investors.",
+    "button1": "Contact AquaVant"
+  }
+}

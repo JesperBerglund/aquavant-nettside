@@ -1,13 +1,11 @@
 <!--
-title: Contact AquaVant | Fish vaccine adjuvants, Oslo
-description: Contact AquaVant about MicroVant adjuvants, partnerships, services or investment. We reply within a few working days.
 nav: contact
 -->
-    <section class="page-hero deep" aria-labelledby="page-title">
+<section class="page-hero deep" aria-labelledby="page-title">
       <div class="container page-hero-content">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
-        <h1 id="page-title">Let’s talk partnership.</h1>
-        <p class="lead">We would like to hear from vaccine manufacturers, aquaculture companies and investors. Send us a message and we will reply within a few working days.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">{{t.page.link1}}</a></li><li aria-current="page">{{t.page.item1}}</li></ol></nav>
+        <h1 id="page-title">{{t.page.title1}}</h1>
+        <p class="lead">{{t.page.intro1}}</p>
       </div>
     </section>
 
@@ -15,13 +13,13 @@ nav: contact
       <section class="section" aria-label="Contact details and form">
         <div class="container contact-grid">
           <div>
-            <h2>Get in touch</h2>
-            <p class="lead">Prefer email? Write to us directly.</p>
+            <h2>{{t.s2.heading1}}</h2>
+            <p class="lead">{{t.s2.intro1}}</p>
             <dl class="contact-list">
-              <div><dt class="k">Kjetil Fyrand, co-founder</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
-              <div><dt class="k">Dr. Cheng Xu, co-founder</dt><dd><a href="mailto:{{email2}}">{{email2}}</a></dd></div>
-              <div><dt class="k">Location</dt><dd><span class="v">Oslo, Norway</span></dd></div>
-              <div><dt class="k">Company</dt><dd><span class="v">AquaVant AS</span><br><span class="k">Org. no. {{orgno}}</span></dd></div>
+              <div><dt class="k">{{t.s2.term1}}</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+              <div><dt class="k">{{t.s2.term2}}</dt><dd><a href="mailto:{{email2}}">{{email2}}</a></dd></div>
+              <div><dt class="k">{{t.s2.term3}}</dt><dd><span class="v">{{t.s2.text1}}</span></dd></div>
+              <div><dt class="k">{{t.s2.term4}}</dt><dd><span class="v">{{t.s2.text2}}</span><br><span class="k">{{t.s2.text3}}</span></dd></div>
             </dl>
           </div>
 
@@ -30,45 +28,45 @@ nav: contact
               <div class="form-status" role="status" tabindex="-1"></div>
               <div class="form-row">
                 <div class="field">
-                  <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                  <label for="name">{{t.s2.field1}} <span class="req" aria-hidden="true">*</span></label>
                   <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
                   <span class="field-error" id="name-error"></span>
                 </div>
                 <div class="field">
-                  <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <label for="email">{{t.s2.field2}} <span class="req" aria-hidden="true">*</span></label>
                   <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
                   <span class="field-error" id="email-error"></span>
                 </div>
               </div>
               <div class="form-row">
                 <div class="field">
-                  <label for="organisation">Company or organisation</label>
+                  <label for="organisation">{{t.s2.field3}}</label>
                   <input id="organisation" name="organisation" type="text" autocomplete="organization">
                 </div>
                 <div class="field">
-                  <label for="topic">What is it about?</label>
+                  <label for="topic">{{t.s2.field4}}</label>
                   <select id="topic" name="topic">
-                    <option>MicroVant adjuvants</option>
-                    <option>Vaccine production</option>
-                    <option>Vaccination equipment</option>
-                    <option>Clinical trials</option>
-                    <option>Investment</option>
-                    <option>Something else</option>
+                    <option>{{t.s2.option1}}</option>
+                    <option>{{t.s2.option2}}</option>
+                    <option>{{t.s2.option3}}</option>
+                    <option>{{t.s2.option4}}</option>
+                    <option>{{t.s2.option5}}</option>
+                    <option>{{t.s2.option6}}</option>
                   </select>
                 </div>
               </div>
               <div class="field">
-                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <label for="message">{{t.s2.field5}} <span class="req" aria-hidden="true">*</span></label>
                 <textarea id="message" name="message" required aria-describedby="message-hint message-error"></textarea>
-                <span class="hint" id="message-hint">Tell us about your species, vaccine format or what you would like to discuss.</span>
+                <span class="hint" id="message-hint">{{t.s2.text4}}</span>
                 <span class="field-error" id="message-error"></span>
               </div>
               <div class="field">
-                <label class="checkbox" for="consent"><input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error"> <span>I agree that AquaVant may store my details to answer this enquiry. Read our <a href="privacy.html">privacy policy</a>.</span></label>
+                <label class="checkbox" for="consent"><input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error"> <span>{{t.s2.text5}} <a href="privacy.html">{{t.s2.link1}}</a>.</span></label>
                 <span class="field-error" id="consent-error"></span>
               </div>
-              <p class="hint">Fields marked <span class="req">*</span> are required.</p>
-              <div><button class="btn btn--ocean" type="submit">Send message</button></div>
+              <p class="hint">{{t.s2.text6}} <span class="req">*</span> {{t.s2.text7}}</p>
+              <div><button class="btn btn--ocean" type="submit">{{t.s2.button1}}</button></div>
             </form>
           </div>
         </div>

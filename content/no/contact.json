@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "title": "Kontakt AquaVant | Adjuvanser til fiskevaksiner, Oslo",
+    "description": "Kontakt AquaVant om MicroVant-adjuvanser, samarbeid, tjenester eller investering. Vi svarer i løpet av noen virkedager."
+  },
+  "page": {
+    "link1": "Hjem",
+    "item1": "Kontakt",
+    "title1": "La oss snakke om samarbeid.",
+    "intro1": "Vi vil gjerne høre fra vaksineprodusenter, havbruksselskaper og investorer. Send oss en melding, så svarer vi i løpet av noen virkedager."
+  },
+  "s2": {
+    "heading1": "Ta kontakt",
+    "intro1": "Vil du heller sende e-post? Skriv direkte til oss.",
+    "term1": "Kjetil Fyrand, medgründer",
+    "term2": "Dr. Cheng Xu, medgründer",
+    "term3": "Sted",
+    "text1": "Oslo, Norge",
+    "term4": "Selskap",
+    "text2": "AquaVant AS",
+    "text3": "Org.nr. {{orgno}}",
+    "field1": "Navn",
+    "field2": "E-post",
+    "field3": "Selskap eller organisasjon",
+    "field4": "Hva gjelder det?",
+    "option1": "MicroVant-adjuvanser",
+    "option2": "Vaksineproduksjon",
+    "option3": "Vaksinasjonsutstyr",
+    "option4": "Kliniske studier",
+    "option5": "Investering",
+    "option6": "Noe annet",
+    "field5": "Melding",
+    "text4": "Fortell oss om art, vaksineformat eller hva du vil snakke om.",
+    "text5": "Jeg godtar at AquaVant lagrer opplysningene mine for å svare på henvendelsen. Les",
+    "link1": "personvernerklæringen",
+    "text6": "Felt merket med",
+    "text7": "må fylles ut.",
+    "button1": "Send melding"
+  }
+}
