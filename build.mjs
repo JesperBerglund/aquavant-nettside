@@ -238,11 +238,24 @@ ${body.replace(/\{\{root\}\}/g, r).replace(/\{\{email\}\}/g, EMAIL).replace(/\{\
 
 // ---------- Images (content/images.json, editable in Pages CMS) ----------
 // Photos already in assets/img are used as they are, with their -800 copy if there is one.
-// Uploads (assets/img/uploads/) are resized and compressed into assets/img/cms/ on each build,
-// so a large photo straight from a phone never reaches visitors.
-let sharp;
+// Any other image (normally an upload in assets/img/uploads/) is resized and compressed into
+// assets/img/cms/ on each build, so a large photo straight from a phone never reaches visitors.
+// sharp is only needed for uploads. The images shipped with the site are measured from
+// their JPEG headers, so the site still builds if sharp fails to install.
+let sharp = null;
 try { sharp = (await import("sharp")).default; }
-catch { throw new Error("The image tool is missing. Run `npm install` once in this folder, then build again."); }
+catch { console.warn("sharp is not available: uploaded images cannot be processed (run `npm install`)."); }
+const SHIPPED = /^assets\/img\/(fjord|production|lab|emulsion|vaccination|trials|og-image|team\/kjetil-fyrand)(-800)?\.jpg$/;
+function jpegSize(file) {
+  const b = readFileSync(file);
+  for (let i = 2; i < b.length - 9;) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const marker = b[i + 1], len = b.readUInt16BE(i + 2);
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+    i += 2 + len;
+  }
+  throw new Error(`Could not read the size of ${file}`);
+}
 const IMAGES = readJson("content/images.json");
 const CMS_DIR = join(OUT, "assets/img/cms");
 const KIND = { kjetil: "portrait", cheng: "portrait", share: "share" };
@@ -257,14 +270,15 @@ async function prepareImage(slot, kind) {
   }
   const file = join(OUT, rel);
   if (!existsSync(file)) throw new Error(`content/images.json: "${slot}" points to /${rel}, which does not exist`);
-  const size = async (path) => { const m = await sharp(join(OUT, path)).metadata(); return [m.width, m.height]; };
-  if (!rel.startsWith("assets/img/uploads/")) {
+  const size = async (path) => jpegSize(join(OUT, path));
+  if (SHIPPED.test(rel)) {
     const small = rel.replace(/\.jpg$/, "-800.jpg");
     const hasSmall = small !== rel && existsSync(join(OUT, small));
     const [w, h] = await size(rel);
     const [sw] = hasSmall ? await size(small) : [w];
     return { src: rel, small: hasSmall ? small : rel, w, h, sw };
   }
+  if (!sharp) throw new Error(`"${slot}" uses an uploaded image, but the image tool sharp is not installed. Run \`npm install\`.`);
   mkdirSync(CMS_DIR, { recursive: true });
   const hash = createHash("sha1").update(readFileSync(file)).digest("hex").slice(0, 8);
   const write = async (name, resize) => {

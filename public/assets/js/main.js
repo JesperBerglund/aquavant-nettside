@@ -686,7 +686,8 @@
       var label = button.textContent;
       button.disabled = true;
       button.textContent = t.sending;
-      fetch("/", {
+      // Post to this page (not "/"), so the language redirect on the front page never interferes.
+      fetch(location.pathname, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(new FormData(form)).toString()
